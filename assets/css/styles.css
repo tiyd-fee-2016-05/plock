@@ -1,0 +1,39 @@
+body {
+  background-color: #ddccaa;
+
+  font-size: 28px;
+}
+
+main {
+  border: 1px solid black;
+
+}
+
+.savedBookmarks{
+  border: 1px solid black;
+  display: inline-block;
+  width:40%;
+
+}
+
+.recommendations{
+  border: 1px solid black;
+  display: inline-block;
+  width: 40%;
+
+}
+
+container{
+  border: 1px solid black;
+}
+
+h1{
+  font-family: "Shadows Into Light";
+  font-size: 150px;
+  color:#663377;
+}
+
+.savedBookmarksHeader{
+  color:#663377;
+  font-size: 50px;
+}
