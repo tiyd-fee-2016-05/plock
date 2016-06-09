@@ -1,58 +1,21 @@
 $( function () {
   "use strict";
 
-  var json = $.getJSON('https://tiyeventapi.herokuapp.com/dummy')
-    .done( function () {
-      $(".savedBookmarkItem".text(this.responseJSON.bookmark_name));
-      console.log ("user info pulled"));
-  });
-
-});
-
-    // $.ajax({
-    //   dataType: "json",
-    //   url: "",
-    //   method: "GET",
-    // }). done (function (data) {
-    //
-    // })
-    // }) May revist based on progress.
+  $.ajax({
+    dataType: "JSON",
+    url: "https://tiyeventapi.herokuapp.com/dummy"
+   })
+   .success(function (data) {
+     console.log("success");
+    //  $.each( data.toArray(), function(index, value) {
+    //    console.log(value[0]);
+    //  });
+    // Array.from(data);
+    console.log(Array.from(data)[0].bookmark_name);
+    $(".place-here").text( Array.from(data)[0].bookmark_name );
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   });
 });
