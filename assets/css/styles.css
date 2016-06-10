@@ -53,7 +53,7 @@ vertical-align: middle;
 
 .Section2 {
   background-color: beige;
-  height: 250px;
+  height: 150px;
   vertical-align: middle;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -85,9 +85,9 @@ h1{
 
 .savedBookmarksHeader{
   color:#B378D3;
-  font-size: 45px;
+  font-size: 30px;
   text-decoration: underline;
-  font-family: "Shadows Into Light";
+  font-family: serif;
   vertical-align: middle;
   padding-top: 5px;
 }
