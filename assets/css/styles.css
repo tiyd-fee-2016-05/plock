@@ -114,7 +114,7 @@ input {
 }
 
 
-.Bookmark1{
+.Bookmark1, .BookMark2{
   border: 1px solid white;
   margin-left: auto;
   margin-right: auto;
