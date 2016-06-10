@@ -10,43 +10,82 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
   <body>
-      <header>
-        <h1 class="plockTitle">Plock</h1>
 
-        <form class="saveNewBookmark">
-          <label for="saveaNewBookmark"> Save a Bookmark!
-          </label>
-          <input type="text" name="saveaBookmark" id="NewBookMark">
+        <div class="grid grid-pad container">
+          <div class="col-1-1">
+             <div class="content">
+                   <h1 class="plockTitle">Plock</h1>
+                   <input type= "text" placeholder="Username"> <input type= "text" placeholder="Password">
 
-          </input>
-      </form> </header>
+                   <div class="grid grid-pad">
+                       <div class="col-1-1">
+                         <p class="description">Cupcake ipsum dolor sit amet tootsie roll candy lemon drops oat cake.
+                           Soufflé cookie cotton candy danish. Chupa chups candy canes croissant powder pudding donut.
+                           Tiramisu bear claw croissant brownie dragée pie candy canes dragée.
+                           Cheesecake lemon drops marshmallow liquorice. Sweet soufflé soufflé marshmallow pudding chocolate bar.
+                           Dragée chocolate cake halvah cake.
+                         </p>
+                          <div class="Section">
+                            <form class="saveNewBookmark">
+                              <label for="saveaNewBookmark"> Save a Bookmark!
+                              </label>
+                              <input type="text" name="saveaBookmark" id="NewBookMark">
 
-      <main>
+                              </input>
+                          </form>
 
-        <div class="savedBookmarks">
-          <h2 class="savedBookmarksHeader">Saved Bookmarks</h2>
-                <ul class="savedBookmarkList">
-                    <li class="savedBookmarkItem place-here">A</li>
-                    <li class="savedBookmarkItem">B</li>
-                    <li class="savedBookmarkItem">C</li>
-                </ul>
-        </div>
+                          </div>
+                       </div>
+                   </div>
 
-        <div class="recommendations">
-                <ul class="recList">
-                    <li class="savedRecItem">A</li>
-                    <li class="savedRecItem">B</li>
-                    <li class="savedRecItem">C</li>
-                </ul>
-        </div>
 
-<form class="makeRec">
-    <label for="makeaRec"> Recommend a Bookmark! </label>
-    <input type="text" name="makeaRec" id="NewRec">
 
-    </input>
-</form>
-       </main>
+                   <div class="grid grid-pad">
+    <div class="col-1-2">
+       <div class="Section">
+
+
+               <h2 class="savedBookmarksHeader">Saved Bookmarks</h2>
+                     <ul class="savedBookmarkList">
+                         <li class="savedBookmarkItem place-here">A</li>
+                         <li class="savedBookmarkItem">B</li>
+                         <li class="savedBookmarkItem">C</li>
+                     </ul>
+
+
+
+
+       </div>
+    </div>
+    <div class="col-1-2">
+       <div class="Section">
+           <h3><h2 class="savedBookmarksHeader">Recommended Bookmarks</h2>
+                 <ul class="savedBookmarkList">
+                     <li class="savedBookmarkItem place-here">A</li>
+                     <li class="savedBookmarkItem">B</li>
+                     <li class="savedBookmarkItem">C</li>
+                 </ul></h3>
+       </div>
+    </div>
+</div>
+
+<div class="grid grid-pad">
+    <div class="col-1-1">
+       <div class="Section">
+         <form class="makeRec">
+             <label for="makeaRec"> Recommend a Bookmark! </label>
+             <input type="text" name="makeaRec" id="NewRec">
+
+             </input>
+         </form>
+       </div>
+    </div>
+</div>
+
+
+             </div>
+          </div>
+      </div>
       <script src="assets/js/scripts.js"></script>
   </body>
 </html>
