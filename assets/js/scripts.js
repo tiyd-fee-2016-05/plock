@@ -27,13 +27,16 @@ $( function () {
    });
  */
 // .............This is for when user hits submit (for username/password ................)
- $('.usernameEntered').on('submit', function (e) {
+ $('.login').on('submit', function (e) {
    e.preventDefault();
 
-   var plockUser = $('input[name="user"]').val();
+   var plockUser = $('.userInfo[name="user"]').val();
+    var plockPassword = $('.passwordInfo[name="password"]').val();
   //  var plockPassword = $('input[name="password"]').val();
    console.log(plockUser);
-// .............This is for when user hits submit (for username/password ................)
+   console.log(plockPassword);
+
+ //  var plockPassword = $('input[name="password"]').val();
 
 
   $.ajax({
