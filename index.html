@@ -10,12 +10,24 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
   <body>
+    <script type="text/javascript">
+    $(document).ready(function(){
+       $('.login').submit();
+  });
+  </script>
 
         <div class="grid grid-pad container">
-          <div class="login">
-          <input type= "text" class="loginInfo" placeholder="Username">
-          <input type= "text" class="loginInfo" placeholder="Password">
-        </div>
+            <div class="login">
+              <form class="usernameEntered">
+              <input name="user" type= "text" class="userInfo" placeholder="Enter Your Username">
+              </form>
+
+              <form class="passwordEntered">
+              <input name="password" type= "text" class="passwordInfo" placeholder="Enter Your Password">
+              </form>
+
+              </div>
+
           <div class="col-1-1">
 
              <div class="content">
@@ -35,10 +47,17 @@
                               <label for="saveaNewBookmark">
                                 <h2 class="savedBookmarksHeader">Save a Bookmark!</h2>
                               </label>
+
+
                               <div class="submissions">
-                              <input type="text" name="saveaBookmark" id="NewBookMarkName"> Name
-                              <input type="text" name="saveaURL" id="NewBookMarkURL"> URL
-                              <input type="text" name="saveaDescrip" id="NewBookMarkDescription"> Description
+                                <input type="text" name="saveaBookmark" placeholder="Enter a bookmark name" id="NewBookMarkName">Name</input>
+                                <input type="text" name="saveaDescrip" placeholder="Enter a bookmark address" id="NewBookMarkURL">URL</input>
+                                <input type="text" name="saveaURL" placeholder="Enter a description" id="NewBookMarkDescription">Description</input>
+                               </div>
+
+
+
+
                             </div>
 
                               </input>
@@ -51,49 +70,65 @@
 
 
                    <div class="grid grid-pad">
-    <div class="col-1-2">
+    <div class="col-1-1">
        <div class="Section2">
 
 
                <h2 class="savedBookmarksHeader">My Bookmarks</h2>
                <ul class="savedBookmarkList">
-                 <!-- First Bookmark -->
-                 <li class="savedBookmarkItem"></li>
-                 <li class="savedMarkDescrip"></li>
-                 <li class="savedMarkURL"></li>
-                 <!-- Second Bookmark -->
-                 <li class="savedBookmarkItem"></li>
-                 <li class="savedMarkDescrip"></li>
-                 <li class="savedMarkURL"></li>
-                 <!-- Third Bookmark -->
-                 <li class="savedBookmarkItem"></li>
-               </ul>
+    <div class="Bookmark1">
+    <!-- First Bookmark -->
+    <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+    <li class="savedBookmarkItem"></li>
+    <li class="savedMarkDescrip"></li>
+    <li class="savedMarkURL"></li>
+  </div>
 
+  <div class="Bookmark2">
+  <!-- Second Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+  </div>
 
+  <div class="Bookmark3">
+  <!-- Third Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+  </div>
 
+  <div class="Bookmark4">
+  <!-- Fourth Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+  </div>
 
+  <div class="Bookmark5">
+  <!-- Fourth Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+  </div>
+  </ul>
        </div>
     </div>
-    <div class="col-1-2">
-       <div class="Section2">
-           <h3><h2 class="savedBookmarksHeader">Recommended Bookmarks</h2>
-                 <ul class="savedBookmarkList">
-                     <li class="savedBookmarkItem place-here">A</li>
-                     <li class="savedBookmarkItem">B</li>
-                     <li class="savedBookmarkItem">C</li>
-                 </ul></h3>
-       </div>
     </div>
 </div>
-
 <div class="grid grid-pad">
+
     <div class="col-1-1">
        <div class="Section">
          <form class="makeRec">
-             <label for="makeaRec"> <h2 class="savedBookmarksHeader">Recommend a Bookmark!</h2> </label>
-             <input type="text" name="saveaBookmark" id="NewRecName"> Name
-             <input type="text" name="saveaBookmark" id="NewRecURL"> URL
-             <input type="text" name="saveaBookmark" id="NewRecDescription"> Description
+             <label for="makeaRec"> <h2 class="savedBookmarksHeader">Recommend a Bookmark!</h2></label>
+             <input type="text" name="saveaBookmark" id="NewRecName">Name</input>
+             <input type="text" name="saveaBookmark" id="NewRecURL">URL</input>
+             <input type="text" name="saveaBookmark" id="NewRecDescription">Description</input>
 
              </input>
          </form>
