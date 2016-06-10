@@ -12,10 +12,17 @@
   <body>
 
         <div class="grid grid-pad container">
-          <div class="login">
-          <input type= "text" class="loginInfo" placeholder="Username">
-          <input type= "text" class="loginInfo" placeholder="Password">
-        </div>
+            <div class="login">
+              <form class="usernameEntered">
+              <input name="user" type= "text" class="userInfo" placeholder="Enter Your Username">
+              </form>
+
+              <form class="passwordEntered">
+              <input name="password" type= "text" class="passwordInfo" placeholder="Enter Your Password">
+              </form>
+
+              </div>
+
           <div class="col-1-1">
 
              <div class="content">
@@ -51,42 +58,34 @@
 
 
                    <div class="grid grid-pad">
-    <div class="col-1-2">
+    <div class="col-1-1">
        <div class="Section2">
 
 
                <h2 class="savedBookmarksHeader">My Bookmarks</h2>
                <ul class="savedBookmarkList">
+    <div class="Bookmark1">
     <!-- First Bookmark -->
+    <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
     <li class="savedBookmarkItem"></li>
     <li class="savedMarkDescrip"></li>
     <li class="savedMarkURL"></li>
-    <!-- Second Bookmark -->
-    <li class="savedBookmarkItem"></li>
-    <li class="savedMarkDescrip"></li>
-    <li class="savedMarkURL"></li>
-    <!-- Third Bookmark -->
-    <li class="savedBookmarkItem"></li>
+  </div>
+
+  <div class="Bookmark1">
+  <!-- First Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+  </div>
   </ul>
-
-
-
-
        </div>
     </div>
-    <div class="col-1-2">
-       <div class="Section2">
-           <h3><h2 class="savedBookmarksHeader">Recommended Bookmarks</h2>
-                 <ul class="savedBookmarkList">
-                     <li class="savedBookmarkItem place-here">A</li>
-                     <li class="savedBookmarkItem">B</li>
-                     <li class="savedBookmarkItem">C</li>
-                 </ul></h3>
-       </div>
     </div>
 </div>
-
 <div class="grid grid-pad">
+
     <div class="col-1-1">
        <div class="Section">
          <form class="makeRec">
