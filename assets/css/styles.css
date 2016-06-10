@@ -7,26 +7,54 @@ body {
   color: white;
 }
 
-main {
-  border: 1px solid black;
 
+.fa{
+  color:#FCE69B;
+  font-size: 100px;
+}
+
+.login {
+margin-left: 68%;
+width: 350px;
+padding-right: 0px;
+padding-bottom: 10px;
+vertical-align: middle;
+}
+
+.loginInfo {
+  margin: 5px;
+  height: 20px;
+  width: 150px;
+  font-size: 15px;
 }
 
 .savedBookmarks{
-  border: 1px solid black;
+
   display: inline-block;
   width:40%;
 
 }
 
 .recommendations{
-  border: 1px solid black;
+
   display: inline-block;
   width: 40%;
 }
 
 .Section {
   background-color: beige;
+  vertical-align: middle;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  /*http://stackoverflow.com/questions/637921/opacity-of-background-color-but-not-the-text
+  I learned about setting the opacity of just the background color with RBGA!*/
+}
+
+.Section2 {
+  background-color: beige;
+  height: 250px;
+  vertical-align: middle;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.6);
   /*http://stackoverflow.com/questions/637921/opacity-of-background-color-but-not-the-text
@@ -34,11 +62,12 @@ main {
 }
 
 
-
 .content {
   text-align: center;
+  margin-top: 15px;
   padding: 8px;
   border-radius: 10px;
+  vertical-align: middle;
 }
 
 .contentA {
@@ -46,23 +75,43 @@ main {
 }
 
 
+
 h1{
   font-family: "Shadows Into Light";
   font-size: 150px;
   color:#B378D3;
+  display: block;
 }
 
 .savedBookmarksHeader{
   color:#B378D3;
-  font-size: 35px;
+  font-size: 45px;
+  text-decoration: underline;
+  font-family: "Shadows Into Light";
+  vertical-align: middle;
+  padding-top: 5px;
 }
 
 input {
-  height: 30px;
+  height: 20px;
   width: 150px;
   border-radius: 5px;
   font-family: serif;
   font-size: 25px;
+  margin-top: 8px;
+}
+
+.submissions {
+
+}
+.description {
+  padding-bottom: 5px;
+  font-size: 24px;
+}
+
+.savedBookmarkList {
+  color: white;
+  font-size: 24px;
 }
 
 
