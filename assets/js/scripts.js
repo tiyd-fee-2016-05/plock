@@ -36,13 +36,13 @@ $( function () {
    console.log(plockUser);
    console.log(plockPassword);
 
- //  var plockPassword = $('input[name="password"]').val();
+  var plockPassword = $('input[name="password"]').val();
 
 
   $.ajax({
     method: 'POST',
     url: 'http://8cc094dc.ngrok.io/my_bookmarks',
-    data: { "username":"fake", "password":"password" },
+    data: { "username":plockUser, "password": plockPassword},
   }).success(function (data) {
     console.log("success");
    $.ajax({
