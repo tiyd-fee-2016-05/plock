@@ -10,75 +10,101 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
   <body>
-      <header>
-        <h1 class="plockTitle">Plock</h1>
 
-        <form class="saveNewBookmark">
-          <label for="saveaNewBookmark"> Save a Bookmark!
-          </label>
-          <input type="text" name="saveaBookmark" id="NewBookMark">
-
-          </input>
-      </form> </header>
-
-      <main>
-
-        <div class="savedBookmarks">
-          <h2 class="savedBookmarksHeader">Saved Bookmarks</h2>
-                <ul class="savedBookmarkList">
-                    <li class="savedBookmarkItem">A</li>
-                    <li class="savedBookmarkItem">B</li>
-                    <li class="savedBookmarkItem">C</li>
-                </ul>
+        <div class="grid grid-pad container">
+          <div class="login">
+          <input type= "text" class="loginInfo" placeholder="Username">
+          <input type= "text" class="loginInfo" placeholder="Password">
         </div>
+          <div class="col-1-1">
 
-        <div class="recommendations">
-                <ul class="recList">
-                    <li class="savedRecItem">A</li>
-                    <li class="savedRecItem">B</li>
-                    <li class="savedRecItem">C</li>
-                </ul>
-        </div>
+             <div class="content">
+                   <h1 class="plockTitle">Plock</h1>
 
 
-        <container class="New">
+                   <div class="grid grid-pad">
+                       <div class="col-1-1">
+                         <p class="description">Cupcake ipsum dolor sit amet tootsie roll candy lemon drops oat cake.
+                           Soufflé cookie cotton candy danish. Chupa chups candy canes croissant powder pudding donut.
+                           Tiramisu bear claw croissant brownie dragée pie candy canes dragée.
+                           Cheesecake lemon drops marshmallow liquorice. Sweet soufflé soufflé marshmallow pudding chocolate bar.
+                           Dragée chocolate cake halvah cake.
+                         </p>
+                          <div class="Section">
+                            <form class="saveNewBookmark">
+                              <label for="saveaNewBookmark">
+                                <h2 class="savedBookmarksHeader">Save a Bookmark!</h2>
+                              </label>
+                              <div class="submissions">
+                              <input type="text" name="saveaBookmark" id="NewBookMarkName"> Name
+                              <input type="text" name="saveaBookmark" id="NewBookMarkURL"> URL
+                              <input type="text" name="saveaBookmark" id="NewBookMarkDescription"> Description
+                            </div>
 
-<form class="makeRec">
-    <label for="makeaRec"> Recommend a Bookmark! </label>
-    <input type="text" name="makeaRec" id="NewRec">
+                              </input>
+                          </form>
 
-    </input>
-</form>
-
-
-
-
-
-        </container>
-
-
-
-
-
-
-
-
-
-
-
-       </main>
+                          </div>
+                       </div>
+                   </div>
 
 
 
+                   <div class="grid grid-pad">
+    <div class="col-1-2">
+       <div class="Section2">
+
+
+               <h2 class="savedBookmarksHeader">My Bookmarks</h2>
+               <ul class="savedBookmarkList">
+    <!-- First Bookmark -->
+    <li class="savedBookmarkItem"></li>
+    <li class="savedMarkDescrip"></li>
+    <li class="savedMarkURL"></li>
+    <!-- Second Bookmark -->
+    <li class="savedBookmarkItem"></li>
+    <li class="savedMarkDescrip"></li>
+    <li class="savedMarkURL"></li>
+    <!-- Third Bookmark -->
+    <li class="savedBookmarkItem"></li>
+  </ul>
 
 
 
 
+       </div>
+    </div>
+    <div class="col-1-2">
+       <div class="Section2">
+           <h3><h2 class="savedBookmarksHeader">Recommended Bookmarks</h2>
+                 <ul class="savedBookmarkList">
+                     <li class="savedBookmarkItem place-here">A</li>
+                     <li class="savedBookmarkItem">B</li>
+                     <li class="savedBookmarkItem">C</li>
+                 </ul></h3>
+       </div>
+    </div>
+</div>
+
+<div class="grid grid-pad">
+    <div class="col-1-1">
+       <div class="Section">
+         <form class="makeRec">
+             <label for="makeaRec"> <h2 class="savedBookmarksHeader">Recommend a Bookmark!</h2> </label>
+             <input type="text" name="saveaBookmark" id="NewRecName"> Name
+             <input type="text" name="saveaBookmark" id="NewRecURL"> URL
+             <input type="text" name="saveaBookmark" id="NewRecDescription"> Description
+
+             </input>
+         </form>
+       </div>
+    </div>
+</div>
 
 
-
-
-
+             </div>
+          </div>
+      </div>
       <script src="assets/js/scripts.js"></script>
   </body>
 </html>
