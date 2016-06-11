@@ -19,28 +19,29 @@
   <div class="imageHeader">
 
     <h1 class="plockTitle">Plock</h1>
-    <div class="login">
-      <form class="usernameEntered">
-      <input name="user" type= "text" class="userInfo" placeholder="Enter Your Username">
-      </form>
 
-      <form class="passwordEntered">
-      <input name="password" type= "text" class="passwordInfo" placeholder="Enter Your Password">
-      </form>
-      </div>
-    <p class="description">Cupcake ipsum dolor sit amet tootsie roll candy lemon drops oat cake.
+    <p class="plockDescription">Cupcake ipsum dolor sit amet tootsie roll candy lemon drops oat cake.
       Soufflé cookie cotton candy danish. Chupa chups candy canes croissant powder pudding donut.
       Tiramisu bear claw croissant brownie dragée pie candy canes dragée.
       Cheesecake lemon drops marshmallow liquorice. Sweet soufflé soufflé marshmallow pudding chocolate bar.
       Dragée chocolate cake halvah cake.
     </p>
+    <div class="login">
+     <form class="usernameEntered">
+     <input name="user" type= "text" class="userInfo" placeholder="Enter Your Username">
+     </form>
+
+     <form class="passwordEntered">
+     <input name="password" type= "text" class="passwordInfo" placeholder="Enter Your Password">
+     </form>
+     </div>
       </div>
 <div class="tabButtons">
 <button class="showBooksmarks"> Show Links! </button>
 <button class="showRecs"> Show Recs! </button>
 </div>
 
-<div class="startingTab"> </div>
+<div class="startingTab"></div>
 
 
 <div class="bookmarkTab">
@@ -80,7 +81,7 @@
     <!-- First Bookmark -->
     <div class="bookmarkDetails">
     <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
-    Bookmark Name<li class="savedBookmarkItem"></li>
+    <span class="nameofBookmark">Bookmark Name </span><li class="savedBookmarkItem"></li>
     Bookmark Description<li class="savedMarkDescrip"></li>
     Bookmark URL<li class="savedMarkURL"></li>
   </div>
@@ -90,7 +91,7 @@
   <!-- Second Bookmark -->
   <div class="bookmarkDetails">
   <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
-  <li class="savedBookmarkItem nameofSavedBookmark"></li>
+  <span class="nameofBookmark">Bookmark Name </span><li class="savedBookmarkItem"></li>
   <li class="savedMarkDescrip"></li>
   <li class="savedMarkURL"></li>
 </div>
@@ -179,12 +180,26 @@
                                       </div>
                                   </div>
 
+                                  <div class="col-1-1">
+                                         <div class="Section">
+                                           <form class="makeRec">
+                                               <label for="makeaRec"> <h2 class="savedBookmarksHeader">Recommend a Bookmark!</h2></label>
+                                               <input type="text" name="saveaBookmark" id="NewRecName">Name</input>
+                                               <input type="text" name="saveaBookmark" id="NewRecURL">URL</input>
+                                               <input type="text" name="saveaBookmark" id="NewRecDescription">Description</input>
+
+                                               </input>
+                                           </form>
+                                         </div>
+                                      </div>
 
 
                                   <div class="grid grid-pad">
                    <div class="col-1-1">
                       <div class="Section2">
                               <ul class="savedBookmarkList">
+
+
                    <div class="Bookmark1">
                    <!-- First Bookmark -->
                    <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
@@ -255,8 +270,6 @@
                </div>
              </div>
            </div>
-
-
 
       <script src="assets/js/scripts.js"></script>
   </body>

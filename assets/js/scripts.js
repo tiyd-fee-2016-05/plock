@@ -68,14 +68,39 @@ $( function () {
       $('.recTab').css('display', 'block');
       $('.bookmarkTab').css('display', 'none');
       $('.startingTab').css('display', 'none');
-
-      console.log("Click works again!");
   });
 
   $('.showBooksmarks').on('click', function() {
       $('.bookmarkTab').css('display', 'block');
       $('.recTab').css('display', 'none');
       $('.startingTab').css('display', 'none');
-      console.log("Second Click works");
   });
   });
+
+  // POST to recommend a bookmark
+    $( ".Bookmark1" ).click( function(e) {
+        e.preventDefault();
+
+
+
+        var plockUser = $('.userInfo[name="user"]').val();
+         var plockPassword = $('.passwordInfo[name="password"]').val();
+         var JSONrecurl = 'http://8cc094dc.ngrok.io/recommendations'
+
+        console.log( Array.from(bookmarksReceived)[0].id );
+        $.ajax({
+          method: "POST",
+          url: "http://8cc094dc.ngrok.io/recommendations",
+          data: { "username": plockUser, "password": plockPassword, "bookmark_id": Array.from(bookmarksReceived)[0].id,
+                  "recipient":"recipient"
+                }
+
+
+          }) // end ajax POST
+        .success(function() {
+          // $( "#NewBookMarkName" ).val("");
+          // $( "#NewBookMarkURL" ).val("");
+          // $( "#NewBookMarkDescription" ).val("");
+          // console.log( "Recommendation Made" );
+        })
+    }); // end keypress()
