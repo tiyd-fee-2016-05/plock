@@ -21,11 +21,11 @@ padding-bottom: 10px;
 vertical-align: middle;
 }
 
-.loginInfo {
+.userInfo ,.passwordInfo{
   margin: 5px;
   height: 20px;
   width: 150px;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .savedBookmarks{
@@ -114,7 +114,7 @@ input {
 }
 
 
-.Bookmark1, .BookMark2{
+.Bookmark1, .BookMark2, .BookMark3, .BookMark4{
   border: 1px solid white;
   margin-left: auto;
   margin-right: auto;
@@ -127,35 +127,40 @@ input {
 .bookmarkPhoto {
   height: 100px;
   width: 100px;
-  margin-left: auto;
+  /*margin-left: auto;*/
   margin-right: auto;
   border-radius: 10px;
 
-  display: block;
+  display: inline-block;
 }
 
 .savedBookmarkItem {
 
   margin-left: auto;
-  margin-right: auto;
+  /*margin-right: auto;*/
   width: 75px;
 font-size: 20px;
-
+display: inline-block;
+vertical-align: top;
 }
 
 .savedMarkDescrip {
 
   margin-left: auto;
-  margin-right: auto;
+  /*margin-right: auto;*/
   width: 75px;
 font-size: 20px;
+display: inline-block;
+vertical-align: top;
   }
 
   .savedMarkURL {
     margin-left: auto;
-    margin-right: auto;
+    /*margin-right: auto;*/
       font-size: 20px;
       text-align: left;
+      display: inline-block;
+      vertical-align:top;
     }
 
 

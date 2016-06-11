@@ -10,18 +10,26 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
   <body>
+<!-- ...................This script below will autofill a username & password
+or testing purposes.  (It doesn't automatically submin, however. ..........) -->
 
-        <div class="grid grid-pad container">
-            <div class="login">
-              <form class="usernameEntered">
-              <input name="user" type= "text" class="userInfo" placeholder="Enter Your Username">
-              </form>
+    <!-- <script type="text/javascript">
+      $(document).ready(function(){
+      $(".usernameEntered",".passwordEntered").submit();
+      });
+    </script> -->
 
-              <form class="passwordEntered">
-              <input name="password" type= "text" class="passwordInfo" placeholder="Enter Your Password">
-              </form>
+    <div class="grid grid-pad container">
+          <div class="login">
+            <form class="usernameEntered">
+              <input name="user" type= "text"  class="userInfo" placeholder="Enter Your Username">
+            </form>
 
-              </div>
+            <form class="passwordEntered">
+              <input name="password" type= "text"  class="passwordInfo" placeholder="Enter Your Password">
+            </form>
+
+          </div>
 
           <div class="col-1-1">
 
@@ -43,10 +51,10 @@
                                 <h2 class="savedBookmarksHeader">Save a Bookmark!</h2>
                               </label>
                               <div class="submissions">
-                              <input type="text" name="saveaBookmark" id="NewBookMarkName"> Name
-                              <input type="text" name="saveaBookmark" id="NewBookMarkURL"> URL
-                              <input type="text" name="saveaBookmark" id="NewBookMarkDescription"> Description
-                            </div>
+                             <input type="text" name="saveaBookmark" id="NewBookMarkName">Name</input>
+                             <input type="text" name="saveaDescrip" id="NewBookMarkURL">URL</input>
+                             <input type="text" name="saveaURL" id="NewBookMarkDescription">Description</input>
+                           </div>
 
                               </input>
                           </form>
@@ -60,20 +68,35 @@
                    <div class="grid grid-pad">
     <div class="col-1-1">
        <div class="Section2">
-
-
                <h2 class="savedBookmarksHeader">My Bookmarks</h2>
-               <ul class="savedBookmarkList">
+    <ul class="savedBookmarkList">
+      <!-- ........ the opening and closing ul tags aren't showing up as matching.  Why?........ -->
     <div class="Bookmark1">
     <!-- First Bookmark -->
-    <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
-    <li class="savedBookmarkItem"></li>
-    <li class="savedMarkDescrip"></li>
-    <li class="savedMarkURL"></li>
+      <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+      <li class="savedBookmarkItem"></li>
+      <li class="savedMarkDescrip"></li>
+      <li class="savedMarkURL"></li>
+    </div>
+
+  <div class="Bookmark2">
+  <!-- Second Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
   </div>
 
-  <div class="Bookmark1">
-  <!-- First Bookmark -->
+  <div class="Bookmark3">
+  <!-- Second Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+  </div>
+
+  <div class="Bookmark4">
+  <!-- Second Bookmark -->
   <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
   <li class="savedBookmarkItem"></li>
   <li class="savedMarkDescrip"></li>
