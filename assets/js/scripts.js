@@ -2,6 +2,7 @@ $( function () {
   "use strict";
   $('.login').on('submit', function (e) {
     e.preventDefault();
+      $('.startingTab').css('display', 'none');
 
     var plockUser = $('.userInfo[name="user"]').val();
      var plockPassword = $('.passwordInfo[name="password"]').val();
@@ -67,13 +68,12 @@ $( function () {
   $('.showRecs').on('click', function() {
       $('.recTab').css('display', 'block');
       $('.bookmarkTab').css('display', 'none');
-      $('.startingTab').css('display', 'none');
+
   });
 
   $('.showBooksmarks').on('click', function() {
       $('.bookmarkTab').css('display', 'block');
       $('.recTab').css('display', 'none');
-      $('.startingTab').css('display', 'none');
   });
   });
 
