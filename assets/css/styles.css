@@ -114,13 +114,16 @@ input {
 }
 
 
-.Bookmark1, .BookMark2, .BookMark3, .BookMark4{
+.Bookmark1, .Bookmark2, .Bookmark3, .Bookmark4, .Bookmark5, .Bookmark6, .Bookmark7,{
   border: 1px solid white;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   margin-top: 5px;
   display: inline-block;
+  height:250;
+  width: 250;
+  position: relative;
 
 }
 
@@ -162,6 +165,10 @@ vertical-align: top;
       display: inline-block;
       vertical-align:top;
     }
+
+  .recipientEntered{
+    font-size: 10px;
+  }
 
 
 
