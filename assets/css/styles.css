@@ -1,12 +1,35 @@
 body {
+  padding-top: 12px;
+  color: #fff;
+  background-color: #43A8BA;
+}
+
+.imageHeader {
   background-image: url("http://i.imgur.com/JuVmXjz.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
-  padding-top: 12px;
-  color: white;
+  background-position: 30% 75%;
+  width: 100%;
+
+  height: 350px;
 }
 
+.plockTitle {
+  text-align: center;
+}
+
+.plockDescription {
+  font-size: 12px;
+
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 10px;
+}
+
+.description {
+  visibility: hidden;
+}
 
 .fa{
   color:#FCE69B;
@@ -14,25 +37,34 @@ body {
 }
 
 .login {
-margin-left: 68%;
-width: 350px;
-padding-right: 0px;
-padding-bottom: 10px;
-vertical-align: middle;
+margin-left: 40%;
+margin-right: 40%;
+
 }
 
 .userInfo, .passwordInfo {
   margin: 5px;
-  height: 20px;
-  width: 150px;
+  height: 30px;
+  width: 250px;
   font-size: 15px;
+  /*display: inline-block;*/
 }
 
 .savedBookmarks{
-
   display: inline-block;
   width:40%;
 
+}
+
+
+
+
+.startingTab {
+  background-color: #43A8BA;
+  width: 100%;
+  height: 1200px;
+  position: absolute;
+  z-index: 100;
 }
 
 .recommendations{
@@ -41,8 +73,39 @@ vertical-align: middle;
   width: 40%;
 }
 
+.bookmarkTab{
+
+  display: block
+}
+
+.recTab{
+  border: 3px solid red;
+  display: none;
+
+}
+
+.tabButtons {
+
+  margin-left: 40%;
+  margin-right: 40%;
+  width: 350px;
+
+}
+
+.showBooksmarks, .showRecs {
+  background-color: #B378D3;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-radius: 5px;
+  width: 150px;
+  z-index: -10;
+}
+
+
 .Section {
-  background-color: beige;
+  background-color: gray;
   vertical-align: middle;
   padding-bottom: 10px;
   border-radius: 10px;
@@ -52,7 +115,7 @@ vertical-align: middle;
 }
 
 .Section2 {
-  background-color: beige;
+  background-color: gray;
   vertical-align: middle;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -105,78 +168,52 @@ input {
 }
 .description {
   padding-bottom: 5px;
-  font-size: 24px;
-}
-
-.savedBookmarkList {
-  color: white;
-  font-size: 24px;
+  font-size: 16px;
 }
 
 
-.Bookmark1, .Bookmark2, .Bookmark3, .Bookmark4, .Bookmark5{
-  width: 600px;
-  height: 150px;
-  border: 1px solid white;
+
+.Bookmark1, .Bookmark2, .Bookmark3, .Bookmark4, .Bookmark5, .Bookmark6, .Bookmark7, .Bookmark8{
+  width: 250px;
+  height: 200px;
+  border: 2px solid white;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px;
   margin-top: 5px;
-  display: inline-block;
-  position: relative;
+  border-radius: 5px;
 }
-
 .bookmarkPhoto {
   height: 100px;
   width: 100px;
   border-radius: 10px;
-
-  display: inline-block;
+  display: inline;
 }
 
-.savedBookmarkItem {
-
-  margin-left: auto;
-  margin-right: auto;
-  width: 75px;
-font-size: 20px;
-
+.bookmarkDetails .nameofBookmark {
+display: inline-block;
+color: lime;
 }
 
-.savedMarkDescrip {
+.savedBookmarkItem li {
+  color: gray;
+}
 
-  margin-left: auto;
-  margin-right: auto;
-  width: 75px;
-font-size: 20px;
-  }
+.bookmarkDetails .descriptionofBookmark {
+  color: blueviolet;
+}
 
-  .savedMarkURL {
-    margin-left: auto;
-    margin-right: auto;
-      font-size: 20px;
-      text-align: left;
-    }
+.bookmarkDetails .URLofBookmark {
+color: blue;
+}
 
+.nameofBookmark, .descriptionofBookmark, .URLofBookmark {
+  border: 1px solid lime;
+  text-align: center;
+  color:gold;
+  font-size: 14px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -391,6 +428,18 @@ font-size: 20px;
 		padding-right: 10px; /* column-space */
 		padding-bottom: 0;
 	}
+
+  .login {
+  border: 3px solid red;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 65px;
+  }
+
+  .description {
+    padding-bottom: 5px;
+    font-size: 24px;
+  }
 
 	.mobile-col-1-1 {
 		width: 100%;
