@@ -2,12 +2,14 @@ $( function () {
   "use strict";
 
   var bookmarksReceived = {};
+  var plockUser;
+  var plockPassword;
   // submit event to login user
   $('.login').on('submit', function (e) {
     e.preventDefault();
 
-    var plockUser = $('.userInfo[name="user"]').val();
-    var plockPassword = $('.passwordInfo[name="password"]').val();
+    plockUser = $('.userInfo[name="user"]').val();
+    plockPassword = $('.passwordInfo[name="password"]').val();
     console.log(plockUser);
     console.log(plockPassword);
 
@@ -15,8 +17,10 @@ $( function () {
   $.ajax({
     method: 'GET',
 
-    url: 'https://dummyplock.herokuapp.com/my_bookmarks',
+
+    // url: 'https://dummyplock.herokuapp.com/my_bookmarks',
     // url: 'http://8cc094dc.ngrok.io/my_bookmarks',
+    url: 'http://74be7da1.ngrok.io/my_bookmarks',
     data: { "username": plockUser, "password": plockPassword},
   })
     .success(function (data) {
@@ -47,9 +51,10 @@ $( function () {
 
       $.ajax({
         method: "POST",
-        url: "https://dummyplock.herokuapp.com/my_bookmarks",
+        // url: "https://dummyplock.herokuapp.com/my_bookmarks",
         // url: 'http://8cc094dc.ngrok.io/my_bookmarks',
-        data: { "username":"fake", "password":"password", "bookmark_name": $('input[name="saveaBookmark"]').val(), "bookmark_description": $('input[name="saveaDescrip"]').val(),
+        url: 'http://74be7da1.ngrok.io/my_bookmarks',
+        data: { "username": plockUser, "password": plockPassword, "bookmark_name": $('input[name="saveaBookmark"]').val(), "bookmark_description": $('input[name="saveaDescrip"]').val(),
                 "bookmark_url": $('input[name="saveaURL"]').val()
               }
         }) // end ajax POST
@@ -63,25 +68,25 @@ $( function () {
 
 
   // click event to make a recommendation
-
   var recommendBtn = $( ".recommendBtn" );
-
   // var bookmarkList = Array.from( $( ".individual-bookmark" ) );
   $(".savedBookmarkList").on( "click", ".recommendBtn", function(e) {
     e.preventDefault();
-    // e.stopPropagation();
 
+    // loop through buttons and grab index of one clicked
     for( var index = 0; index < recommendBtn.length; index++ ) {
       if( this === recommendBtn[index] ) {
         console.log( "Number: " + index );
         console.log( "ID: " + Array.from(bookmarksReceived)[index].id );
 
+        // once button index is found, POST sender, button index, and recipient data to server
         $.ajax({
           method: "POST",
-          url: "https://dummyplock.herokuapp.com/recommendations",
+          // url: "https://dummyplock.herokuapp.com/recommendations",
           // url: 'http://8cc094dc.ngrok.io/recommendations',
-          data: { "username":"fake", "password":"password", "bookmark_id": Array.from(bookmarksReceived)[index].id,
-                  "recipient":"recipient"
+          url: 'http://74be7da1.ngrok.io/recommendations',
+          data: { "username": plockUser, "password": plockPassword, "bookmark_id": Array.from(bookmarksReceived)[index].id,
+                  "recipient":"erikpetersen"
                 }
           }) // end ajax POST
         .success(function() {
@@ -89,9 +94,9 @@ $( function () {
           // $( "#NewBookMarkURL" ).val("");
           // $( "#NewBookMarkDescription" ).val("");
           // console.log( "Recommendation Made" );
-        })
-      }
-    }
+        }) // end .success
+      } // end if
+    } // end for loop
 
     // console.log( $(bookmarkList) );
     // console.log( this );
