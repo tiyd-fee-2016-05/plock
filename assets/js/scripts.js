@@ -1,97 +1,107 @@
 $( function () {
   "use strict";
 
-  // ajax get call for receiving bookmarks
+  var bookmarksReceived = {};
+  // submit event to login user
+  $('.login').on('submit', function (e) {
+    e.preventDefault();
 
-// .............This is for when user hits submit (for username/password ................)
- $('.login').on('submit', function (e) {
-   e.preventDefault();
-
-   var plockUser = $('.userInfo[name="user"]').val();
+    var plockUser = $('.userInfo[name="user"]').val();
     var plockPassword = $('.passwordInfo[name="password"]').val();
-  //  var plockPassword = $('input[name="password"]').val();
-   console.log(plockUser);
-   console.log(plockPassword);
+    console.log(plockUser);
+    console.log(plockPassword);
 
- //  var plockPassword = $('input[name="password"]').val();
-
-// .......This sends the username and password to the backend.......
+  // GET sends username & password.
   $.ajax({
     method: 'GET',
-    url: 'https://dummyplock.herokuapp.com/my_bookmarks',
-    data: { "username":"fake", "password":"password" },
-  }).success(function (data) {
+    url: 'http://8cc094dc.ngrok.io/my_bookmarks',
+    data: { "username": plockUser, "password": plockPassword},
+  })
+  // the success method below will return the API data held at the url above.
+    .success(function (data) {
     console.log("success");
 
-     //  $.each( data.toArray(), function(index, value) {
-     //    console.log(value[0]);
-     //  });
-     // Array.from(data);
-     // console.log(Array.from(data)[0].bookmark_name);
+    var bookmarkName = $(".savedBookmarkItem");
+    var bookmarkDescrip = $(".savedMarkDescrip");
+    var bookmarkURL = $(".savedMarkURL");
+    // console.log( Array.from(data)[0].id );
+    bookmarksReceived = data;
+    // The term "data" above doesn't need to be declared as a variable.  It's always
+    // understood to be the data that's returned from the API.
 
-    //  .....This places the returned values for each bookmark's name, description, and url into the html.
-     var bookmarkName = $(".savedBookmarkItem");
-     var bookmarkDescrip = $(".savedMarkDescrip");
-     var bookmarkURL = $(".savedMarkURL");
+//  ............A for LOOP to look through all the bookmark data returned ...........
+    for( var index = 0; index < data.length; index++ ) {
+    //  console.log(index);
+     // console.log( bookmarks[index]);
+     // Erik's comment - This is OK for now, but will need to switch to creating the <li> here in js if we want this dynamic
 
-     for( var index = 0; index < 7; index++ ) {
-       console.log(index);
+// ....at the location of bookmark_name, add to my html code as follows: (make an array
+ // from the data returned from the API) add bookmark_name to my html so it's value can be visible (in a moment)
+ // (same process for bookmark_description and bookmark_url) ........
+     bookmarkName[index].innerHTML = ( Array.from(data)[index].bookmark_name );
+     bookmarkDescrip[index].innerHTML = ( Array.from(data)[index].bookmark_description );
+     bookmarkURL[index].innerHTML = ( Array.from(data)[index].bookmark_url );
+    } // end for loop
+   }); // end GET success
+  }); // end POST success
 
-       bookmarkName[index].innerHTML = ( Array.from(data)[index].bookmark_name );
-       bookmarkDescrip[index].innerHTML = ( Array.from(data)[index].bookmark_description );
-       bookmarkURL[index].innerHTML = ( Array.from(data)[index].bookmark_url );
-     }
-
-    });
-
-  });
-
-  });
-
-  // ........... This sends a request to backend to save a bookmark ..........
+  // .......When the element with id NewBookMarkDescription is pressed,
+  // send to the backend all of the data listed.
   $( "#NewBookMarkDescription" ).keypress( function(e) {
-  if( e.which === 13 ) {
-    e.preventDefault();
+    if( e.which === 13 ) {
+      e.preventDefault();
 
-    $.ajax({
-      method: "POST",
-      url: "'http://8cc094dc.ngrok.io/my_bookmarks'",
-      data: { "username":"fake", "password":"password", "bookmark_name": $('input[name="saveaBookmark"]').val(), "bookmark_description": $('input[name="saveaDescrip"]').val(),
-              "bookmark_url": $('input[name="saveaURL"]').val()
-            }
-    }) // end ajax POST
-    // .success(function() {
-    //
-    // })
-    //
-    // .success(function (data) {
-    //   console.log("success");
-  } // end if
-}); // end keypress()
-  // ........... [ABOVE]  This sends a request to backend to save a bookmark ..........
+      $.ajax({
+        method: "POST",
+        url: "http://8cc094dc.ngrok.io/my_bookmarks",
+        data: { "username":"fake", "password":"password", "bookmark_name": $('input[name="saveaBookmark"]').val(), "bookmark_description": $('input[name="saveaDescrip"]').val(),
+                "bookmark_url": $('input[name="saveaURL"]').val()
+              }
+        })
+        // ........If that POST was successful, supply the values for the 3 id's listed below to the
+        // html that you created above.
+      .success(function() {
+        $( "#NewBookMarkName" ).val("");
+        $( "#NewBookMarkURL" ).val("");
+        $( "#NewBookMarkDescription" ).val("");
+      })
+    } // closes line 51
+  }); // closes line 50
 
-
-// ...................  attempts at creating RECOMMEND A BOOKMARK code .........
-  $( ".recommendABookmark" ).keypress( function(e) {
-    // ABOVE was "#NewBookMarkDescription"
-  if( e.which === 13 ) {
-    e.preventDefault();
-
-    $.ajax({
-      method: "POST",
-      url: "'http://8cc094dc.ngrok.io/recommendations'",
-      data: { "username":"fake", "password":"password", "bookmark_id":"1" ,
-      $('input[name="recipient"]').val()
+  // POST to recommend a bookmark
+  $( ".Bookmark1" ).click( function(e) {
+      e.preventDefault();
+      console.log( Array.from(bookmarksReceived)[0].id );
+      $.ajax({
+        method: "POST",
+        url: "http://8cc094dc.ngrok.io/recommendations",
+        data: { "username":"fake", "password":"password", "bookmark_id": Array.from(bookmarksReceived)[0].id,
+                "recipient":"recipient"
+              }
 
 
-            }
-    }) // end ajax POST
-    // .success(function() {
-    //
-    // })
-    //
-    // .success(function (data) {
-    //   console.log("success");
-  } // end if
-}); // end keypress()
-// ...................  attempts at creating RECOMMEND A BOOKMARK code .........
+        }) // end ajax POST
+      .success(function() {
+        // $( "#NewBookMarkName" ).val("");
+        // $( "#NewBookMarkURL" ).val("");
+        // $( "#NewBookMarkDescription" ).val("");
+        // console.log( "Recommendation Made" );
+      })
+  }); // end keypress()
+
+}); // end outer function
+
+$('.showRecs').on('click', function() {
+     $('.recTab').css('display', 'block');
+     $('.bookmarkTab').css('display', 'none');
+     $('.startingTab').css('display', 'none');
+
+     console.log("Click works again!");
+ });
+
+ $('.showBooksmarks').on('click', function() {
+     $('.bookmarkTab').css('display', 'block');
+     $('.recTab').css('display', 'none');
+     $('.startingTab').css('display', 'none');
+     console.log("Second Click works");
+ });
