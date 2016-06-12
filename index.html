@@ -6,96 +6,64 @@
     <title>Plock</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-</head>
-
-<body>
+     <link rel="stylesheet" href="assets/css/styles.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </head>
+  <body>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('.login').submit();
-        });
-    </script>
+    $(document).ready(function(){
+       $('.login').submit();
+  });
+  </script>
 
-    <div class="imageHeader">
+  <div class="imageHeader">
 
-        <h1 class="plockTitle">Plock</h1>
+    <h1 class="plockTitle">Plock</h1>
 
-        <p class="plockDescription">Cupcake ipsum dolor sit amet tootsie roll candy lemon drops oat cake. Soufflé cookie cotton candy danish. Chupa chups candy canes croissant powder pudding donut. Tiramisu bear claw croissant brownie dragée pie candy canes dragée. Cheesecake lemon
-            drops marshmallow liquorice. Sweet soufflé soufflé marshmallow pudding chocolate bar. Dragée chocolate cake halvah cake.
-        </p>
-        <div class="login">
-            <form class="usernameEntered">
-                <input name="user" type="text" class="userInfo" placeholder="Enter Your Username">
-            </form>
+    <p class="plockDescription">Cupcake ipsum dolor sit amet tootsie roll candy lemon drops oat cake.
+      Soufflé cookie cotton candy danish. Chupa chups candy canes croissant powder pudding donut.
+      Tiramisu bear claw croissant brownie dragée pie candy canes dragée.
+      Cheesecake lemon drops marshmallow liquorice. Sweet soufflé soufflé marshmallow pudding chocolate bar.
+      Dragée chocolate cake halvah cake.
+    </p>
+    <div class="login">
+     <form class="usernameEntered">
+     <input name="user" type= "text" class="userInfo" placeholder="Enter Your Username">
+     </form>
 
-            <form class="passwordEntered">
-                <input name="password" type="text" class="passwordInfo" placeholder="Enter Your Password">
-                <input type="submit" value="Login" class="submitButton">
-            </form>
-        </div>
-    </div>
+     <form class="passwordEntered">
+     <input name="password" type= "text" class="passwordInfo" placeholder="Enter Your Password">
+     </form>
+     </div>
+      </div>
+<div class="tabButtons">
+<button class="showBooksmarks"> Show Links! </button>
+<button class="showRecs"> Show Recs! </button>
+</div>
 
-    <div class="startingTab"></div>
+<div class="startingTab"></div>
 
 
-
-    <div class="bookmarkTab">
-        <div class "container">
-            <div class="grid grid-pad">
-
-                <div class="col-1-1">
-                    <div class="bookmarkTab">
-                        <div class="Section">
+<div class="bookmarkTab">
+<div class"container">
+  <div class="grid grid-pad container">
+                   <div class="grid grid-pad">
+                       <div class="col-1-1">
+<div class="bookmarkTab">
+                          <div class="Section">
                             <form class="saveNewBookmark">
-                                <label for="saveaNewBookmark">
-                                    <h2 class="savedBookmarksHeader">Save a Bookmark!</h2>
-                                </label>
+                              <label for="saveaNewBookmark">
+                                <h2 class="savedBookmarksHeader">Save a Bookmark!</h2>
+                              </label>
 
 
-                                <div class="submissions">
-
-                                    <input type="text" name="saveaBookmark" id="NewBookMarkName">Name</input>
-                                    <input type="text" name="saveaDescrip" id="NewBookMarkURL">Description</input>
-                                    <input type="text" name="saveaURL" id="NewBookMarkDescription">URL</input>
-                                </div>
-
-
-
-                        </div>
-                        </input>
-                        </form>
-
-                    </div>
-                </div>
-
-                <div class="tabButtons">
-                    <button class="showBooksmarks"> My Bookmarks </button>
-                    <button class="showRecs"> My Recommendations </button>
-                </div>
-                <div class="col-1-1">
-                    <div class="Section2">
-                        <ul class="savedBookmarkList">
-                            <div class="Bookmark1">
-                                <!-- First Bookmark -->
-                                <div class="bookmarkDetails">
-                                    <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
-                                    <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
-                                    <li class="savedMarkDescrip"></li>
-                                    <li class="savedMarkURL"></li>
-                                </div>
-                            </div>
-
-                            <div class="Bookmark2">
-                                <!-- Second Bookmark -->
-                                <div class="bookmarkDetails">
-                                    <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
-                                    <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
-                                    <li class="savedMarkDescrip"></li>
-                                    <li class="savedMarkURL"></li>
-                                </div>
-                            </div>
+                              <div class="submissions">
+                                  <input type="text" name="saveaBookmark" id="NewBookMarkName">Name</input>
+                                 <input type="text" name="saveaDescrip" id="NewBookMarkDescription">Description</input>
+                                <input type="text" name="saveaURL" id="NewBookMarkURL">URL</input>
+                               </div>
+                          </div>
 
 
                             <div class="Bookmark3">
@@ -118,7 +86,7 @@
                                 </div>
                             </div>
                             <div class="Bookmark5">
-                                <!-- Fourth Bookmark -->
+                                <!-- Fifth Bookmark -->
                                 <div class="bookmarkDetails">
                                     <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
                                     <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
@@ -129,7 +97,7 @@
 
 
                             <div class="Bookmark6">
-                                <!-- Fourth Bookmark -->
+                                <!-- Sixth Bookmark -->
                                 <div class="bookmarkDetails">
                                     <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
                                     <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
@@ -137,102 +105,213 @@
                                     <li class="savedMarkURL"></li>
                                 </div>
                             </div>
-
-                            <button class="Next6"> See More! </button>
-                            <button class="Hide6"> Hide Next </button>
-
-                            <div class="SeeMore">
-                                <div class="Bookmark1">
-                                    <!-- First Bookmark -->
-                                    <div class="bookmarkDetails">
-                                        <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
-                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
-                                        <li class="savedMarkDescrip"></li>
-                                        <li class="savedMarkURL"></li>
-                                    </div>
-                                </div>
-
-                                <div class="Bookmark2">
-                                    <!-- Second Bookmark -->
-                                    <div class="bookmarkDetails">
-                                        <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
-                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
-                                        <li class="savedMarkDescrip"></li>
-                                        <li class="savedMarkURL"></li>
-                                    </div>
-                                </div>
+                   <div class="grid grid-pad">
+    <div class="col-1-1">
+       <div class="Section2">
+               <ul class="savedBookmarkList">
+    <div class="Bookmark1">
+    <!-- First Bookmark -->
+    <div class="bookmarkDetails">
+    <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+    <span class="nameofBookmark">Bookmark Name </span><li class="savedBookmarkItem"></li>
+    Bookmark Description<li class="savedMarkDescrip"></li>
+    Bookmark URL<li class="savedMarkURL"></li>
 
 
-                                <div class="Bookmark3">
-                                    <!-- Third Bookmark -->
-                                    <div class="bookmarkDetails">
-                                        <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
-                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
-                                        <li class="savedMarkDescrip"></li>
-                                        <li class="savedMarkURL"></li>
-                                    </div>
-                                </div>
+      <!-- recommend a bookmark button code below -->
+      <div class="recommendABookmark">Recommend this bookmark!
+        <form class="recipientEntered">
+          <input name="recipient" type= "text"  class="recipient" placeholder="Enter Recipient's Username">
+        </form>
+      </div>
+        <!-- recommend a bookmark button code above -->
+  </div>
+</div>
 
-                                <div class="Bookmark4">
-                                    <!-- Fourth Bookmark -->
-                                    <div class="bookmarkDetails">
-                                        <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
-                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
-                                        <li class="savedMarkDescrip"></li>
-                                        <li class="savedMarkURL"></li>
-                                    </div>
-                                </div>
-                                <div class="Bookmark5">
-                                    <!-- Fourth Bookmark -->
-                                    <div class="bookmarkDetails">
-                                        <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
-                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
-                                        <li class="savedMarkDescrip"></li>
-                                        <li class="savedMarkURL"></li>
-                                    </div>
-                                </div>
+  <div class="Bookmark2">
+  <!-- Second Bookmark -->
+  <div class="bookmarkDetails">
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <span class="nameofBookmark">Bookmark Name </span><li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+</div>
+  </div>
 
+  <div class="Bookmark3">
+  <!-- Third Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+  </div>
 
-                                <div class="Bookmark6">
-                                    <!-- Fourth Bookmark -->
-                                    <div class="bookmarkDetails">
-                                        <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
-                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
-                                        <li class="savedMarkDescrip"></li>
-                                        <li class="savedMarkURL"></li>
-                                    </div>
-                                </div>
-                            </div>
+  <div class="Bookmark4">
+  <!-- Fourth Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+  </div>
 
+  <div class="Bookmark5">
+  <!-- Fifth Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+  </div>
 
+  <div class="Bookmark6">
+  <!-- Sixth Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+  </div>
 
+  <div class="Bookmark7">
+  <!-- Seventh Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+  </div>
 
-
-
-
-
-
-
-                    </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <div class="Bookmark8">
+  <!-- 8th Bookmark -->
+  <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+  <li class="savedBookmarkItem"></li>
+  <li class="savedMarkDescrip"></li>
+  <li class="savedMarkURL"></li>
+  </div>
+  </ul>
+       </div>
     </div>
-
-
-    <!-- COPY DIV FOR RECOMMENDATIONS -->
-    <div class="recTab">
-
-
-        WORDS
-
-
-
-
     </div>
+</div>
+</div>
+</div>
 
-    <script src="assets/js/scripts.js"></script>
-</body>
+                 <!-- COPY DIV FOR RECOMMENDATIONS -->
+                 <div class="recTab">
+              <div class"container">
+                 <div class="grid grid-pad container">
+                                  <div class="grid grid-pad">
+                                      <div class="col-1-1">
+               <div class="bookmarkTab">
+                                         <div class="Section">
+                                           <form class="saveNewBookmark">
+                                             <label for="saveaNewBookmark">
+                                               <h2 class="savedBookmarksHeader">Save a Bookmark!</h2>
+                                             </label>
 
+
+                                             <div class="submissions">
+                                                 <input type="text" name="saveaBookmark" id="NewBookMarkName">Name</input>
+                                                <input type="text" name="saveaDescrip" id="NewBookMarkDescription">URL</input>
+                                               <input type="text" name="saveaURL" id="NewBookMarkURL">Description</input>
+                                                                          </div>
+                                           </div>
+
+                                             </input>
+                                         </form>
+
+                                         </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-1-1">
+                                         <div class="Section">
+                                           <form class="makeRec">
+                                               <label for="makeaRec"> <h2 class="savedBookmarksHeader">Recommend a Bookmark!</h2></label>
+                                               <input type="text" name="saveaBookmark" id="NewRecName">Name</input>
+                                               <input type="text" name="saveaBookmark" id="NewRecDescription">Description</input>
+                                               <input type="text" name="saveaBookmark" id="NewRecURL">URL</input>
+
+                                               </input>
+                                           </form>
+                                         </div>
+                                      </div>
+
+
+                                  <div class="grid grid-pad">
+                   <div class="col-1-1">
+                      <div class="Section2">
+                              <ul class="savedBookmarkList">
+
+
+                   <div class="Bookmark1">
+                   <!-- First Bookmark -->
+                   <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+                   <li class="savedBookmarkItem"></li>
+                   <li class="savedMarkDescrip"></li>
+                   <li class="savedMarkURL"></li>
+                 </div>
+
+                 <div class="Bookmark2">
+                 <!-- Second Bookmark -->
+                 <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+                 <li class="savedBookmarkItem"></li>
+                 <li class="savedMarkDescrip"></li>
+                 <li class="savedMarkURL"></li>
+                 </div>
+
+                 <div class="Bookmark3">
+                 <!-- Third Bookmark -->
+                 <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+                 <li class="savedBookmarkItem"></li>
+                 <li class="savedMarkDescrip"></li>
+                 <li class="savedMarkURL"></li>
+                 </div>
+
+                 <div class="Bookmark4">
+                 <!-- Fourth Bookmark -->
+                 <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+                 <li class="savedBookmarkItem"></li>
+                 <li class="savedMarkDescrip"></li>
+                 <li class="savedMarkURL"></li>
+                 </div>
+
+                 <div class="Bookmark5">
+                 <!-- Fifth Bookmark -->
+                 <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+                 <li class="savedBookmarkItem"></li>
+                 <li class="savedMarkDescrip"></li>
+                 <li class="savedMarkURL"></li>
+                 </div>
+
+                 <div class="Bookmark6">
+                 <!-- Sixth Bookmark -->
+                 <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+                 <li class="savedBookmarkItem"></li>
+                 <li class="savedMarkDescrip"></li>
+                 <li class="savedMarkURL"></li>
+                 </div>
+
+                 <div class="Bookmark7">
+                 <!-- Seventh Bookmark -->
+                 <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+                 <li class="savedBookmarkItem"></li>
+                 <li class="savedMarkDescrip"></li>
+                 <li class="savedMarkURL"></li>
+                 </div>
+
+                 <div class="Bookmark8">
+                 <!-- Eighth Bookmark -->
+                 <img class="bookmarkPhoto" src="https://s-media-cache-ak0.pinimg.com/736x/19/d8/64/19d864e7594878d0a92268249db4e39a.jpg">
+                 <li class="savedBookmarkItem"></li>
+                 <li class="savedMarkDescrip"></li>
+                 <li class="savedMarkURL"></li>
+                 </div>
+                 </ul>
+                      </div>
+                   </div>
+                   </div>
+               </div>
+             </div>
+           </div>
+
+      <script src="assets/js/scripts.js"></script>
+  </body>
 </html>

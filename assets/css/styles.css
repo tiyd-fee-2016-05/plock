@@ -1,53 +1,68 @@
-    body {
-    padding-top: 12px;
-    color: red;
-    background-color: #43A8BA;
+body {
+  padding-top: 12px;
+  color: white;
+  background-color: #43A8BA;
 }
+
 .imageHeader {
-    background-image: url("http://i.imgur.com/JuVmXjz.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black;
-    background-position: 30% 75%;
-    width: 100%;
-    height: 350px;
+  background-image: url("http://i.imgur.com/JuVmXjz.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: 30% 75%;
+  width: 100%;
+  border: 3px solid green;
+  height: 350px;
 }
+
 .plockTitle {
-    text-align: center;
+  text-align: center;
 }
+
 .plockDescription {
-    font-size: 12px;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-top: 10px;
+  font-size: 12px;
+  border: 1px solid lime;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 10px;
 }
-.fa {
-    color: #FCE69B;
-    font-size: 100px;
+
+.fa{
+  color:#FCE69B;
+  font-size: 100px;
 }
+
 .login {
-    margin-left: 40%;
-    margin-right: 40%;
+margin-left: 40%;
+margin-right: 40%;
+
 }
+
 .userInfo, .passwordInfo {
-    margin: 5px;
-    height: 30px;
-    width: 250px;
-    font-size: 15px;
-    /*display: inline-block;*/
+  margin: 5px;
+  height: 30px;
+  width: 250px;
+  font-size: 15px;
+  /*display: inline-block;*/
+
 }
-.submitButton {
-    background-color: #B378D3;
-    height: 30px;
-    margin-left: 15%;
-    padding-bottom: 5px;
+
+.savedBookmarks{
+  display: inline-block;
+  width:40%;
 }
-.content {
-    text-align: center;
-    border-radius: 10px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
+
+.bookmarkDetails li {
+color: gold;
+}
+
+.startingTab {
+  background-color: #43A8BA;
+  width: 100%;
+  height: 1200px;
+  position: absolute;
+  z-index: 10;
+  border: 1px solid gold;
 }
 .startingTab {
     background-color: #43A8BA;
@@ -82,24 +97,55 @@
     width: 150px;
     z-index: -10;
 }
+
+.bookmarkTab{
+
+  display: block
+}
+
+.recTab{
+  border: 3px solid red;
+  display: none;
+
+}
+
+.tabButtons {
+
+  margin-left: 40%;
+  margin-right: 40%;
+  width: 350px;
+
+}
+
+.showBooksmarks, .showRecs {
+  background-color: #B378D3;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-radius: 5px;
+  width: 150px;
+}
+
+
 .Section {
-    background-color: gray;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    margin-left: 20%;
-    margin-right: 20%;
-    /*http://stackoverflow.com/questions/637921/opacity-of-background-color-but-not-the-text
+  background-color: gray;
+  vertical-align: middle;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  /*http://stackoverflow.com/questions/637921/opacity-of-background-color-but-not-the-text
+
   I learned about setting the opacity of just the background color with RBGA!*/
 }
 .Section2 {
-    background-color: gray;
-    vertical-align: middle;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    margin-top: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
-    /*http://stackoverflow.com/questions/637921/opacity-of-background-color-but-not-the-text
+
+  background-color: gray;
+  vertical-align: middle;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  /*http://stackoverflow.com/questions/637921/opacity-of-background-color-but-not-the-text
+
   I learned about setting the opacity of just the background color with RBGA!*/
 }
 .bookmarkDetails .savedBookmarkItem {
@@ -138,8 +184,9 @@ input {
 }
 
 .description {
-    padding-bottom: 5px;
-    font-size: 16px;
+
+  padding-bottom: 5px;
+  font-size: 16px;
 }
 .savedBookmarkList {
     margin-left: 50px;
@@ -156,11 +203,26 @@ input {
     display: inline-block;
     margin-bottom: 10px;
 }
+
+
+.Bookmark1, .Bookmark2, .Bookmark3, .Bookmark4, .Bookmark5, .Bookmark6, .Bookmark7, .Bookmark8{
+  width: 250px;
+  height: 250px;
+  border: 1px solid white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  display: inline-block;
+  position: relative;
+}
 .bookmarkPhoto {
-    height: 125px;
-    width: 125px;
-    border-radius: 10px;
-    float: left;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .bookmarkDetails .nameofBookmark {
     display: inline-block;
@@ -245,46 +307,126 @@ input {
     width: 100%;
 }
 @media handheld, only screen and (max-width: 767px) {
-    .grid {
-        width: 100%;
-        min-width: 0;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 20px;
-        /* grid-space to left */
-        padding-right: 10px;
-        /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */
-    }
-    [class*='col-'] {
-        width: auto;
-        float: none;
-        margin: 10px 0;
-        padding-left: 0;
-        padding-right: 10px;
-        /* column-space */
-    }
-    [class*='col-'] [class*='col-'] {
-        padding-right: 0;
-    }
-    /* Mobile Layout */
-    [class*='mobile-col-'] {
-        float: left;
-        margin: 0 0 10px;
-        padding-left: 0;
-        padding-right: 10px;
-        /* column-space */
-        padding-bottom: 0;
-    }
-    .login {
-        border: 3px solid red;
-        margin-left: 30%;
-        margin-right: 30%;
-        margin-top: 65px;
-    }
-    .description {
-        padding-bottom: 5px;
-        font-size: 24px;
-    }
-    .mobile-col-1-1 {
-        width: 100%;
-    }
+
+	.grid {
+		width: 100%;
+		min-width: 0;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 20px; /* grid-space to left */
+		padding-right: 10px; /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */
+	}
+
+	[class*='col-'] {
+		width: auto;
+		float: none;
+		margin: 10px 0;
+		padding-left: 0;
+		padding-right: 10px; /* column-space */
+	}
+
+	[class*='col-'] [class*='col-'] {
+		padding-right: 0;
+	}
+
+	/* Mobile Layout */
+
+	[class*='mobile-col-'] {
+		float: left;
+		margin: 0 0 10px;
+		padding-left: 0;
+		padding-right: 10px; /* column-space */
+		padding-bottom: 0;
+	}
+
+  .login {
+  border: 3px solid red;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 65px;
+  }
+
+  .description {
+    padding-bottom: 5px;
+    font-size: 24px;
+  }
+
+	.mobile-col-1-1 {
+		width: 100%;
+	}
+	.mobile-col-2-3, .mobile-col-8-12 {
+		width: 66.66%;
+	}
+
+	.mobile-col-1-2, .mobile-col-6-12 {
+		width: 50%;
+	}
+
+	.mobile-col-1-3, .mobile-col-4-12 {
+		width: 33.33%;
+	}
+
+	.mobile-col-1-4, .mobile-col-3-12 {
+		width: 25%;
+	}
+
+	.mobile-col-1-5 {
+		width: 20%;
+	}
+
+	.mobile-col-1-6, .mobile-col-2-12 {
+		width: 16.667%;
+	}
+
+	.mobile-col-1-7 {
+		width: 14.28%;
+	}
+
+	.mobile-col-1-8 {
+		width: 12.5%;
+	}
+
+	.mobile-col-1-9 {
+		width: 11.1%;
+	}
+
+	.mobile-col-1-10 {
+		width: 10%;
+	}
+
+	.mobile-col-1-11 {
+		width: 9.09%;
+	}
+
+	.mobile-col-1-12 {
+		width: 8.33%
+	}
+
+	/* Layout Columns */
+
+	.mobile-col-11-12 {
+		width: 91.66%
+	}
+
+	.mobile-col-10-12 {
+		width: 83.333%;
+	}
+
+	.mobile-col-9-12 {
+		width: 75%;
+	}
+
+	.mobile-col-5-12 {
+		width: 41.66%;
+	}
+
+	.mobile-col-7-12 {
+		width: 58.33%
+	}
+
+	.hide-on-mobile {
+		display: none !important;
+		width: 0;
+		height: 0;
+	}
+}
