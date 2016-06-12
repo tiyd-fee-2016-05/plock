@@ -26,7 +26,7 @@ $( function () {
      var bookmarkDescrip = $(".savedMarkDescrip");
      var bookmarkURL = $(".savedMarkURL");
 
-     for( var index = 0; index < 7; index++ ) {
+     for( var index = 0; index < data.length; index++ ) {
        console.log(index);
        // console.log( bookmarks[index]);
        // This is OK for now, but will need to switch to creating the <li> here in js if we want this dynamic
@@ -67,7 +67,7 @@ $( function () {
          var bookmarkDescrip = $(".savedMarkDescrip");
          var bookmarkURL = $(".savedMarkURL");
 
-         for( var index = 0; index < 7; index++ ) {
+         for( var index = 0; index < data.length; index++ ) {
            console.log(index);
            // console.log( bookmarks[index]);
            // This is OK for now, but will need to switch to creating the <li> here in js if we want this dynamic
@@ -125,32 +125,19 @@ $( function () {
           // console.log( "Recommendation Made" );
         })
     }); // end keypress()
+  };
+});
 
-    // POST to recommend a bookmark
-      $( ".Bookmark1" ).click( function(e) {
-          e.preventDefault();
+$('.Next6').on('click', function() {
+    $(".Next6").css('display', 'none')
+    $('.Hide6').css('display', 'block');
+    $(".SeeMore").css("display", "block")
 
-          var plockUser = $('.userInfo[name="user"]').val();
-           var plockPassword = $('.passwordInfo[name="password"]').val();
-           var JSONrecURL = 'https://dummyplock.herokuapp.com/my_bookmarks'
+});
 
-          console.log( Array.from(bookmarksReceived)[0].id );
-          $.ajax({
-            method: "POST",
-            url: "http://8cc094dc.ngrok.io/recommendations",
-            data: { "username":"fake", "password":"password", "bookmark_id": Array.from(bookmarksReceived)[0].id,
-                    "recipient":"recipient"
-                  }
+$('.Hide6').on('click', function() {
+    $(".Next6").css('display', 'block')
+    $('.Hide6').css('display', 'none');
+    $(".SeeMore").css("display", "none")
 
-
-            }) // end ajax POST
-          .success(function() {
-            // $( "#NewBookMarkName" ).val("");
-            // $( "#NewBookMarkURL" ).val("");
-            // $( "#NewBookMarkDescription" ).val("");
-            // console.log( "Recommendation Made" );
-          })
-      }); // end keypress()
-
-    };
-  });
+});
