@@ -2,6 +2,7 @@ $( function () {
   "use strict";
 
   var bookmarksReceived = {};
+  var bookmarksRecommended = {};
   var plockUser;
   var plockPassword;
   // submit event to login user
@@ -17,7 +18,6 @@ $( function () {
   $.ajax({
     method: 'GET',
 
-
     // url: 'https://dummyplock.herokuapp.com/my_bookmarks',
     // url: 'http://8cc094dc.ngrok.io/my_bookmarks',
     url: 'http://74be7da1.ngrok.io/my_bookmarks',
@@ -29,6 +29,7 @@ $( function () {
     var bookmarkName = $(".savedBookmarkItem");
     var bookmarkDescrip = $(".savedMarkDescrip");
     var bookmarkURL = $(".savedMarkURL");
+
     // console.log( Array.from(data)[0].id );
     bookmarksReceived = data;
 
@@ -42,7 +43,39 @@ $( function () {
      bookmarkURL[index].innerHTML = ( Array.from(data)[index].bookmark_url );
     } // end for loop
    }); // end GET success
-  }); // end POST success
+
+   // GET will submit username and password and then retrieve their recommendations
+   $.ajax({
+     method: 'GET',
+
+     // url: 'https://dummyplock.herokuapp.com/my_bookmarks',
+     // url: 'http://8cc094dc.ngrok.io/my_bookmarks',
+     url: 'http://74be7da1.ngrok.io/recommendations',
+     data: { "username": plockUser, "password": plockPassword},
+   })
+     .success(function (data) {
+     console.log("success");
+
+     var recName = $(".recItem");
+     var recDescrip = $(".recDescrip");
+     var recURL = $(".recURL");
+     // console.log( Array.from(data)[0].id );
+     bookmarksRecommended = data;
+
+     for( var index = 0; index < 1; index++ ) {
+      console.log(Array.from(bookmarksRecommended)[0].bookmark_name);
+      // console.log( bookmarks[index]);
+      // This is OK for now, but will need to switch to creating the <li> here in js if we want this dynamic
+      // line 33 is throwing: scripts.js:33 Uncaught TypeError: Cannot set property 'innerHTML' of undefined
+      recName[index].innerHTML = ( Array.from(bookmarksRecommended)[index].bookmark_name );
+      recDescrip[index].innerHTML = ( Array.from(bookmarksRecommended)[index].bookmark_description );
+      recURL[index].innerHTML = ( Array.from(bookmarksRecommended)[index].bookmark_url );
+     } // end for loop
+    }); // end GET success
+
+
+
+ }); // end login event
 
   // POST to save a bookmark
   $( "#NewBookMarkDescription" ).keypress( function(e) {
