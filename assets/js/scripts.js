@@ -2,6 +2,18 @@
 
 $( function () {
   "use strict";
+  $('.login').on('submit', function (e) {
+    e.preventDefault();
+      $('.startingTab').css('display', 'none');
+
+    var plockUser = $('.userInfo[name="user"]').val();
+     var plockPassword = $('.passwordInfo[name="password"]').val();
+     var JSONurl = 'https://dummyplock.herokuapp.com/my_bookmarks';
+
+    console.log(plockUser);
+    console.log(plockPassword);
+
+
 
   var bookmarksReceived = {};
   // submit event to login user
@@ -52,6 +64,7 @@ $( function () {
   $( "#NewBookMarkDescription" ).keypress( function(e) {
     if( e.which === 13 ) {
       e.preventDefault();
+
 
       $.ajax({
         method: "POST",
