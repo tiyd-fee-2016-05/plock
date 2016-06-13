@@ -1,110 +1,895 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Plock</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
-     <link rel="stylesheet" href="assets/css/styles.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  </head>
-  <body>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/chicken.png" type="image/x-icon">
+   <link rel="icon" href="assets/chicken.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
 
-        <div class="grid grid-pad container">
-          <div class="login">
-          <input type= "text" class="loginInfo" placeholder="Username">
-          <input type= "text" class="loginInfo" placeholder="Password">
+<body>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.login').submit();
+        });
+    </script>
+
+    <div class="imageHeader">
+
+
+
+        <h1 class="plockTitle">Plock</h1>
+        <div class="login">
+            <form class="usernameEntered">
+                <input name="user" type="text" class="userInfo" placeholder="Enter Your Username">
+            </form>
+
+            <form class="passwordEntered">
+                <input name="password" type="text" class="passwordInfo" placeholder="Enter Your Password">
+                <br>
+                <input type="submit" value="Login" class="submitButton">
+            </form>
         </div>
-          <div class="col-1-1">
 
-             <div class="content">
-                   <h1 class="plockTitle">Plock</h1>
+        <h3 class="plockSub">Save the Internet.</h1>
+    </div>
+    <div class="startingTab">
 
 
-                   <div class="grid grid-pad">
-                       <div class="col-1-1">
-                         <p class="description">Cupcake ipsum dolor sit amet tootsie roll candy lemon drops oat cake.
-                           Soufflé cookie cotton candy danish. Chupa chups candy canes croissant powder pudding donut.
-                           Tiramisu bear claw croissant brownie dragée pie candy canes dragée.
-                           Cheesecake lemon drops marshmallow liquorice. Sweet soufflé soufflé marshmallow pudding chocolate bar.
-                           Dragée chocolate cake halvah cake.
-                         </p>
-                          <div class="Section">
+
+    </div>
+
+    <p class="plockDescription">Cupcake ipsum dolor sit amet tootsie roll candy lemon drops oat cake. Soufflé cookie cotton candy danish. Chupa chups candy canes croissant powder pudding donut. Tiramisu bear claw croissant brownie dragée pie candy canes dragée. Cheesecake lemon
+        drops marshmallow liquorice. Sweet soufflé soufflé marshmallow pudding chocolate bar. Dragée chocolate cake halvah cake.
+    </p>
+
+    <div class="bookmarkTab">
+        <div class "container">
+            <div class="grid grid-pad">
+
+                <div class="col-1-1">
+                        <div class="Section">
                             <form class="saveNewBookmark">
-                              <label for="saveaNewBookmark">
-                                <h2 class="savedBookmarksHeader">Save a Bookmark!</h2>
-                              </label>
-                              <div class="submissions">
-                              <input type="text" name="saveaBookmark" id="NewBookMarkName"> Name
-                              <input type="text" name="saveaBookmark" id="NewBookMarkURL"> URL
-                              <input type="text" name="saveaBookmark" id="NewBookMarkDescription"> Description
+                                <label for="saveaNewBookmark">
+                                    <h2 class="savedBookmarksHeader">Save a Bookmark!</h2>
+                                </label>
+
+
+                                <div class="submissions">
+                                  <form>
+                                    <input type="text" name="saveaBookmark" id="NewBookMarkName"></input>
+                                    <span class="details">Name </span>
+                                    <input type="text" name="saveaDescrip" id="NewBookMarkURL"></input>
+                                    <span class="details">Description </span>
+                                    <input type="text" name="saveaURL" id="NewBookMarkDescription"></input>
+                                  <span class="details">URL</span>
+                                  <button class="saveBtn">
+                                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                                    Save Bookmark</button>
+                                </div>
+
+
+
+                        </div>
+                        </input>
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="tabButtons">
+                    <button class="showBookmarks"> |Bookmarks| </button>
+                    <button class="showRecs"> |Recommendations| </button>
+                </div>
+                <div class="col-1-1">
+                    <div class="Section2">
+                        <ul class="savedBookmarkList">
+                            <div class="Bookmark1">
+                                <!-- First Bookmark -->
+                                <div class="bookmarkDetails">
+                                    <span class="bookmarkPhoto"> 1 </span>
+                                    <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                    <li class="savedMarkDescrip"></li>
+                                    <li class="savedMarkURL"></li>
+
+                                    <div class="recommendABookmark">
+                                      <form class="recipientEntered">
+                                        <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                        <br><button class="recommendBtn">
+                                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                          Recommend</button>
+                                        </form>
+                 </div>
+
+                                </div>
                             </div>
 
-                              </input>
+                            <div class="Bookmark2">
+                                <!-- Second Bookmark -->
+                                <div class="bookmarkDetails">
+                                    <span class="bookmarkPhoto"> 2 </span>
+                                    <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                    <li class="savedMarkDescrip"></li>
+                                    <li class="savedMarkURL"></li>
+
+                                    <div class="recommendABookmark">
+                                      <form class="recipientEntered">
+                                        <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                        <br><button class="recommendBtn">
+                                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                          Recommend</button>
+                                        </form>
+                 </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="Bookmark3">
+                                <!-- Third Bookmark -->
+                                <div class="bookmarkDetails">
+                                    <span class="bookmarkPhoto"> 3 </span>
+                                    <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                    <li class="savedMarkDescrip"></li>
+                                    <li class="savedMarkURL"></li>
+
+                                    <div class="recommendABookmark">
+                                      <form class="recipientEntered">
+                                        <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                        <br><button class="recommendBtn">
+                                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                          Recommend</button>
+                                        </form>
+                 </div>
+
+                                </div>
+                            </div>
+
+                            <div class="Bookmark4">
+                                <!-- Fourth Bookmark -->
+                                <div class="bookmarkDetails">
+                                    <span class="bookmarkPhoto"> 4 </span>
+                                    <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                    <li class="savedMarkDescrip"></li>
+                                    <li class="savedMarkURL"></li>
+
+                                    <div class="recommendABookmark">
+                                      <form class="recipientEntered">
+                                        <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                        <br><button class="recommendBtn">
+                                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                          Recommend</button>
+                                        </form>
+                 </div>
+
+                                </div>
+                            </div>
+                            <div class="Bookmark5">
+                                <!-- Fourth Bookmark -->
+                                <div class="bookmarkDetails">
+                                    <span class="bookmarkPhoto"> 5 </span>
+                                    <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                    <li class="savedMarkDescrip"></li>
+                                    <li class="savedMarkURL"></li>
+
+                                    <div class="recommendABookmark">
+                                      <form class="recipientEntered">
+                                        <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                        <br><button class="recommendBtn">
+                                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                          Recommend</button>
+                                        </form>
+                 </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="Bookmark6">
+                                <!-- Fourth Bookmark -->
+                                <div class="bookmarkDetails">
+                                    <span class="bookmarkPhoto"> 6 </span>
+                                    <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                    <li class="savedMarkDescrip"></li>
+                                    <li class="savedMarkURL"></li>
+
+                                    <div class="recommendABookmark">
+                                      <form class="recipientEntered">
+                                        <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                        <br><button class="recommendBtn">
+                                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                          Recommend</button>
+                                        </form>
+                 </div>
+
+                                </div>
+                            </div>
+
+                            <button class="Next6"> See More </button>
+                            <button class="Hide6"> Hide </button>
+
+                            <div class="SeeMore">
+                                <div class="Bookmark1">
+                                    <!-- First Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 7 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                     </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="Bookmark2">
+                                    <!-- Second Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 8 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                     </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="Bookmark3">
+                                    <!-- Third Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 9 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                     </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="Bookmark4">
+                                    <!-- Fourth Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 10 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                     </div>
+
+                                    </div>
+                                </div>
+                                <div class="Bookmark5">
+                                    <!-- Fourth Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 11 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                     </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="Bookmark6">
+                                    <!-- Fourth Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 12 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                     </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="Next12"> See More </button>
+                            <button class="Hide12"> Hide </button>
+
+                            <div class="SeeMore2">
+                                <div class="Bookmark1">
+                                    <!-- First Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 13 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                      </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="Bookmark2">
+                                    <!-- Second Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 14 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                      </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="Bookmark3">
+                                    <!-- Third Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 15 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                      </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="Bookmark4">
+                                    <!-- Fourth Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 16 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                      </div>
+
+                                    </div>
+                                </div>
+                                <div class="Bookmark5">
+                                    <!-- Fourth Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 17 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                      </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="Bookmark6">
+                                    <!-- Fourth Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 18 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                      </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                    </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- DIV FOR RECOMMENDATIONS -->
+    <div class="recTab">
+          <div class "container">
+              <div class="grid grid-pad">
+
+                  <div class="col-1-1">
+                          <div class="Section">
+                              <form class="saveNewBookmark">
+                                  <label for="saveaNewBookmark">
+                                      <h2 class="savedBookmarksHeader">Recommended to Me</h2>
+                                  </label>
+                          </div>
+                          </input>
                           </form>
 
-                          </div>
-                       </div>
-                   </div>
+                      </div>
+                  </div>
+
+                  <div class="tabButtons">
+                      <button class="showBookmarks"> Bookmarks </button>
+                      <button class="showRecs"> Recommendations </button>
+                  </div>
+                  <div class="col-1-1">
+                      <div class="Section">
+                        <ul class="savedBookmarkList">
+                            <div class="Bookmark1">
+                                <!-- First Bookmark -->
+                                <div class="bookmarkDetails">
+                                    <span class="bookmarkPhoto"> 1 </span>
+                                    <span class="JSONbookmark"> <li class="recItem"></li></span>
+                                    <li class="recDescrip"></li>
+                                    <li class="recURL"></li>
+
+                                    <div class="recommendABookmark">
+                                      <form class="recipientEntered">
+                                        <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                        <br><button class="recommendBtn">
+                                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                          Recommend</button>
+                                        </form>
+                 </div>
+
+                                </div>
+                            </div>
+
+                            <div class="Bookmark2">
+                                <!-- Second Bookmark -->
+                                <div class="bookmarkDetails">
+                                    <span class="bookmarkPhoto"> 2 </span>
+                                    <span class="JSONbookmark"> <li class="recItem"></li></span>
+                                    <li class="recDescrip"></li>
+                                    <li class="recURL"></li>
+
+                                    <div class="recommendABookmark">
+                                      <form class="recipientEntered">
+                                        <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                        <br><button class="recommendBtn">
+                                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                          Recommend</button>
+                                        </form>
+                 </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="Bookmark3">
+                                <!-- Third Bookmark -->
+                                <div class="bookmarkDetails">
+                                    <span class="bookmarkPhoto"> 3 </span>
+                                    <span class="JSONbookmark"> <li class="recItem"></li></span>
+                                    <li class="recDescrip"></li>
+                                    <li class="recURL"></li>
+
+                                    <div class="recommendABookmark">
+                                      <form class="recipientEntered">
+                                        <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                        <br><button class="recommendBtn">
+                                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                          Recommend</button>
+                                        </form>
+                 </div>
+
+                                </div>
+                            </div>
+
+                            <div class="Bookmark4">
+                                <!-- Fourth Bookmark -->
+                                <div class="bookmarkDetails">
+                                    <span class="bookmarkPhoto"> 4 </span>
+                                    <span class="JSONbookmark"> <li class="recItem"></li></span>
+                                    <li class="recDescrip"></li>
+                                    <li class="recURL"></li>
+
+                                    <div class="recommendABookmark">
+                                      <form class="recipientEntered">
+                                        <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                        <br><button class="recommendBtn">
+                                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                          Recommend</button>
+                                        </form>
+                 </div>
+
+                                </div>
+                            </div>
+                            <div class="Bookmark5">
+                                <!-- Fourth Bookmark -->
+                                <div class="bookmarkDetails">
+                                    <span class="bookmarkPhoto"> 5 </span>
+                                    <span class="JSONbookmark"> <li class="recItem"></li></span>
+                                    <li class="recDescrip"></li>
+                                    <li class="recURL"></li>
+
+                                    <div class="recommendABookmark">
+                                      <form class="recipientEntered">
+                                        <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                        <br><button class="recommendBtn">
+                                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                          Recommend</button>
+                                        </form>
+                 </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="Bookmark6">
+                                <!-- Fourth Bookmark -->
+                                <div class="bookmarkDetails">
+                                    <span class="bookmarkPhoto"> 6 </span>
+                                    <span class="JSONbookmark"> <li class="recItem"></li></span>
+                                    <li class="recDescrip"></li>
+                                    <li class="recURL"></li>
+
+                                    <div class="recommendABookmark">
+                                      <form class="recipientEntered">
+                                        <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                        <br><button class="recommendBtn">
+                                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                          Recommend</button>
+                                        </form>
+                 </div>
+
+                                </div>
+                            </div>
+
+                            <button class="Next6"> See More </button>
+                            <button class="Hide6"> Hide </button>
+
+                            <div class="SeeMore">
+                                <div class="Bookmark1">
+                                    <!-- First Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 7 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                     </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="Bookmark2">
+                                    <!-- Second Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 8 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                     </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="Bookmark3">
+                                    <!-- Third Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 9 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                     </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="Bookmark4">
+                                    <!-- Fourth Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 10 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                     </div>
+
+                                    </div>
+                                </div>
+                                <div class="Bookmark5">
+                                    <!-- Fourth Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 11 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                     </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="Bookmark6">
+                                    <!-- Fourth Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 12 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                     </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="Next12"> See More </button>
+                            <button class="Hide12"> Hide </button>
+
+                            <div class="SeeMore2">
+                                <div class="Bookmark1">
+                                    <!-- First Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 13 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                      </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="Bookmark2">
+                                    <!-- Second Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 14 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                      </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="Bookmark3">
+                                    <!-- Third Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 15 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                      </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="Bookmark4">
+                                    <!-- Fourth Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 16 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                      </div>
+
+                                    </div>
+                                </div>
+                                <div class="Bookmark5">
+                                    <!-- Fourth Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 17 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                      </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="Bookmark6">
+                                    <!-- Fourth Bookmark -->
+                                    <div class="bookmarkDetails">
+                                        <span class="bookmarkPhoto"> 18 </span>
+                                        <span class="JSONbookmark"> <li class="savedBookmarkItem"></li></span>
+                                        <li class="savedMarkDescrip"></li>
+                                        <li class="savedMarkURL"></li>
+
+                                        <div class="recommendABookmark">
+                                          <form class="recipientEntered">
+                                            <input name="recipient" type= "text" class="recipient" placeholder="Enter Recipient's Username">
+                                            <br><button class="recommendBtn">
+                                              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                              Recommend</button>
+                                            </form>
+                      </div>
+
+                                    </div>
+                                </div>
+                            </div>
 
 
 
-                   <div class="grid grid-pad">
-    <div class="col-1-2">
-       <div class="Section2">
 
 
-               <h2 class="savedBookmarksHeader">My Bookmarks</h2>
-               <ul class="savedBookmarkList">
-    <!-- First Bookmark -->
-    <li class="savedBookmarkItem"></li>
-    <li class="savedMarkDescrip"></li>
-    <li class="savedMarkURL"></li>
-    <!-- Second Bookmark -->
-    <li class="savedBookmarkItem"></li>
-    <li class="savedMarkDescrip"></li>
-    <li class="savedMarkURL"></li>
-    <!-- Third Bookmark -->
-    <li class="savedBookmarkItem"></li>
-  </ul>
+                    </div>
+                    </ul>
+                  </div>
 
 
 
 
-       </div>
+
+
+
     </div>
-    <div class="col-1-2">
-       <div class="Section2">
-           <h3><h2 class="savedBookmarksHeader">Recommended Bookmarks</h2>
-                 <ul class="savedBookmarkList">
-                     <li class="savedBookmarkItem place-here">A</li>
-                     <li class="savedBookmarkItem">B</li>
-                     <li class="savedBookmarkItem">C</li>
-                 </ul></h3>
-       </div>
-    </div>
-</div>
 
-<div class="grid grid-pad">
-    <div class="col-1-1">
-       <div class="Section">
-         <form class="makeRec">
-             <label for="makeaRec"> <h2 class="savedBookmarksHeader">Recommend a Bookmark!</h2> </label>
-             <input type="text" name="saveaBookmark" id="NewRecName"> Name
-             <input type="text" name="saveaBookmark" id="NewRecURL"> URL
-             <input type="text" name="saveaBookmark" id="NewRecDescription"> Description
+    <script src="assets/js/scripts.js"></script>
+</body>
 
-             </input>
-         </form>
-       </div>
-    </div>
-</div>
-
-
-             </div>
-          </div>
-      </div>
-      <script src="assets/js/scripts.js"></script>
-  </body>
 </html>

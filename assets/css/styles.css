@@ -1,149 +1,294 @@
-body {
-  background-image: url("http://i.imgur.com/JuVmXjz.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: black;
-  padding-top: 12px;
-  color: white;
+    body {
+    padding-top: 12px;
+    color: red;
+    background-color: #43A8BA;
+}
+.imageHeader {
+    background-image: url("http://i.imgur.com/JuVmXjz.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: 30% 75%;
+    width: 100%;
+    height: 175px;
+    padding-top: 5px;
+}
+
+h1 {
+    font-family: "Shadows Into Light";
+    font-size: 150px;
+    color: #B378D3;
+    display: block;
+    margin-top: 20px;
+}
+
+h3 {
+    color: #FCE69B;
+    font-family: "Shadows Into Light";
+    font-size: 35px;
+    margin-left: 75%;
+    margin-top: -60px;
+
+}
+
+.saveBtn {
+  background-color: #B378D3;
+  font-size: 12px;
+  height: 20px;
+  border-radius: 5px;
+  width: 125px;
+}
+.plockDescription {
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 10px;
+    color:white;
 }
 
 
-.fa{
-  color:#FCE69B;
-  font-size: 100px;
+.Section2 {
+  margin-left: 10%;
 }
 
 .login {
-margin-left: 68%;
-width: 350px;
-padding-right: 0px;
-padding-bottom: 10px;
-vertical-align: middle;
-}
 
-.loginInfo {
-  margin: 5px;
-  height: 20px;
-  width: 150px;
-  font-size: 15px;
-}
-
-.savedBookmarks{
-
-  display: inline-block;
-  width:40%;
+position: absolute;
+margin-top: -175px;
+margin-left: 75%
 
 }
+.userInfo, .passwordInfo {
+    margin: 5px;
+    height: 15px;
+    width: 175px;
+    font-size: 15px;
 
-.recommendations{
-
-  display: inline-block;
-  width: 40%;
+    /*display: inline-block;*/
+}
+.submitButton {
+    background-color: #B378D3;
+    height: 25px;
+    font-size: 12px;
+    padding: 5px;
+    margin-left: 5%;
+}
+.content {
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.startingTab {
+    background-color: #43A8BA;
+    width: 100%;
+    height: 1200px;
+    position: absolute;
+    z-index: 100;
+    display: block;
+}
+.recommendations {
+    display: inline-block;
+    width: 40%;
+}
+.bookmarkTab {
+    display: block;
+}
+.recTab {
+    display: none;
+}
+.tabButtons {
+    margin-left: 40%;
+    margin-right: 40%;
+    width: 350px;
+}
+.showBookmarks, .showRecs {
+  background-color: #43A8BA;
+  font-size: 12px;
+  height: 40px;
+  border-radius: 5px;
+  width: 125px;
+  border none;
 }
 
 .Section {
-  background-color: beige;
-  vertical-align: middle;
-  padding-bottom: 10px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  /*http://stackoverflow.com/questions/637921/opacity-of-background-color-but-not-the-text
-  I learned about setting the opacity of just the background color with RBGA!*/
+    border-radius: 10px;
+    margin-right: 10%;
+    background-color: #D9E2C3;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+
 }
 
-.Section2 {
-  background-color: beige;
-  height: 150px;
-  vertical-align: middle;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  /*http://stackoverflow.com/questions/637921/opacity-of-background-color-but-not-the-text
-  I learned about setting the opacity of just the background color with RBGA!*/
+.bookmarkDetails .recItem {
+    color: white;
+    font-size: 20px;
+}
+.bookmarkDetails .recDescrip {
+    color: #FBE58F;
+    font-size: 15px;
+}
+.bookmarkDetails .recURL {
+    color: #85CBCD;
+    font-size: 15px;
+    margin-left: 5px;
 }
 
-
-.content {
-  text-align: center;
-  margin-top: 15px;
-  padding: 8px;
-  border-radius: 10px;
-  vertical-align: middle;
-}
-
-.contentA {
-  text-align: center;
-}
-
-
-
-h1{
-  font-family: "Shadows Into Light";
-  font-size: 150px;
-  color:#B378D3;
-  display: block;
-}
-
-.savedBookmarksHeader{
-  color:#B378D3;
-  font-size: 30px;
-  text-decoration: underline;
-  font-family: serif;
-  vertical-align: middle;
-  padding-top: 5px;
-}
-
-input {
+#NewBookMarkName, #NewBookMarkURL, #NewBookMarkDescription {
   height: 20px;
-  width: 150px;
+  width: 200px;
+  display: inline-block;;
+  border: 1px solid gold;
+}
+
+.details {
+  color:#FBE58F;
+  display: inline-block;;
+}
+.bookmarkDetails .savedBookmarkItem {
+    color: white;
+    font-size: 20px;
+}
+.bookmarkDetails .savedMarkDescrip {
+    color: #FBE58F;
+    font-size: 15px;
+}
+.bookmarkDetails .savedMarkURL {
+    color: #85CBCD;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.recommendBtn {
+  background-color: #B378D3;
+  font-size: 12px;
+  height: 20px;
   border-radius: 5px;
-  font-family: serif;
-  font-size: 25px;
-  margin-top: 8px;
+  width: 125px;
 }
 
-.submissions {
-
+.recipient {
+  height: 20px;
+  width: 175px;
+  font-size: 15px;
 }
+.savedBookmarksHeader {
+    color: #B378D3;
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: serif;
+    vertical-align: middle;
+    padding-top: 5px;
+    text-align: center;
+}
+input {
+    height: 20px;
+    width: 150px;
+    border-radius: 5px;
+    font-family: serif;
+    font-size: 25px;
+    margin-top: 8px;
+}
+
 .description {
-  padding-bottom: 5px;
-  font-size: 24px;
+    padding-bottom: 5px;
+    font-size: 16px;
 }
 
-.savedBookmarkList {
-  color: white;
-  font-size: 24px;
+.Bookmark1, .Bookmark2, .Bookmark3, .Bookmark4, .Bookmark5, .Bookmark6, .Bookmark7, .Bookmark8, .Bookmark9, .Bookmark10 {
+    width: 400px;
+    height: 125px;
+    background-color: #D9E2C3;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-left: 5px;
+    /*http://stackoverflow.com/questions/637921/opacity-of-background-color-but-not-the-text
+  I learned about setting the opacity of just the background color with RBGA!*/
+    margin-left: 5%;
+    /*margin-right: auto;*/
+    margin-top: 5px;
+    padding-left: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+    overflow:auto;
+}
+.bookmarkPhoto {
+    height: 100px;
+    width: 100px;
+    border: 1px solid green;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    float: left;
+    font-size: 75px;
+    color: white;
+    text-align: center;
+    font-family: "Shadows Into Light";
+    vertical-align: middle;
+    background-color: #9AD0CA;
+}
+.bookmarkDetails .nameofBookmark {
+    display: inline-block;
+    color: white;
+    font-size: 25px;
+    margin-left: 5px;
 }
 
+.SeeMore {
+    display: none;
+  }
 
-.savedBookmark1{
-  border: 1px solid black;
+.SeeMore2 {
+        display: none;
 
+}
+.Next6 {
+    display: block;
+    background-color: #B378D3;
+    font-size: 12px;
+    margin-left: 35%;
+    margin-right: 40%;
+    height: 40px;
+    border-radius: 5px;
+    width: 150px;
+
+}
+.Hide6 {
+  display: none;
+  background-color: #B378D3;
+  font-size: 12px;
+  margin-left: 35%;
+  margin-right: 40%;
+  height: 40px;
+  border-radius: 5px;
+  width: 150px;
 
 }
 
+.Next12 {
+    display: none;
+    background-color: #B378D3;
+    font-size: 12px;
+    margin-left: 35%;
+    margin-right: 40%;
+    height: 40px;
+    border-radius: 5px;
+    width: 150px;
 
+}
+.Hide12 {
+  display: none;
+  background-color: #B378D3;
+  font-size: 12px;
+  margin-left: 35%;
+  margin-right: 40%;
+  height: 40px;
+  border-radius: 5px;
+  width: 150px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 /*
   Simple Grid
@@ -152,283 +297,121 @@ input {
   Site - http://dallasbass.com
 */
 
-
-[class*='grid'],
-[class*='col-'],
-[class*='mobile-'],
-.grid:after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+[class*='grid'], [class*='col-'], [class*='mobile-'], .grid:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-
 [class*='col-'] {
-	float: left;
-  	min-height: 1px;
-	padding-right: 20px; /* column-space */
+    float: left;
+    min-height: 1px;
+    padding-right: 20px;
+    /* column-space */
 }
-
 [class*='col-'] [class*='col-']:last-child {
-	padding-right: 0;
+    padding-right: 0;
 }
-
 .grid {
-	width: 100%;
-	max-width: 1140px;
-	min-width: 748px; /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
-	margin: 0 auto;
-	overflow: hidden;
+    width: 100%;
+    max-width: 1140px;
+    min-width: 748px;
+    /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
+    margin: 0 auto;
+    overflow: hidden;
 }
-
 .grid:after {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
-
 .grid-pad {
-	padding-top: 20px;
-	padding-left: 20px; /* grid-space to left */
-	padding-right: 0; /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */
+    padding-top: 20px;
+    padding-left: 20px;
+    /* grid-space to left */
+    padding-right: 0;
+    /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */
 }
-
 .push-right {
-	float: right;
+    float: right;
 }
 
 /* Content Columns */
 
 .col-1-1 {
-	width: 100%;
+    width: 100%;
 }
-.col-2-3, .col-8-12 {
-	width: 66.66%;
-}
-
-.col-1-2, .col-6-12 {
-	width: 50%;
-}
-
-.col-1-3, .col-4-12 {
-	width: 33.33%;
-}
-
-.col-1-4, .col-3-12 {
-	width: 25%;
-}
-
-.col-1-5 {
-	width: 20%;
-}
-
-.col-1-6, .col-2-12 {
-	width: 16.667%;
-}
-
-.col-1-7 {
-	width: 14.28%;
-}
-
-.col-1-8 {
-	width: 12.5%;
-}
-
-.col-1-9 {
-	width: 11.1%;
-}
-
-.col-1-10 {
-	width: 10%;
-}
-
-.col-1-11 {
-	width: 9.09%;
-}
-
-.col-1-12 {
-	width: 8.33%
-}
-
-/* Layout Columns */
-
-.col-11-12 {
-	width: 91.66%
-}
-
-.col-10-12 {
-	width: 83.333%;
-}
-
-.col-9-12 {
-	width: 75%;
-}
-
-.col-5-12 {
-	width: 41.66%;
-}
-
-.col-7-12 {
-	width: 58.33%
-}
-
-/* Pushing blocks */
-
-.push-2-3, .push-8-12 {
-	margin-left: 66.66%;
-}
-
-.push-1-2, .push-6-12 {
-	margin-left: 50%;
-}
-
-.push-1-3, .push-4-12 {
-	margin-left: 33.33%;
-}
-
-.push-1-4, .push-3-12 {
-	margin-left: 25%;
-}
-
-.push-1-5 {
-	margin-left: 20%;
-}
-
-.push-1-6, .push-2-12 {
-	margin-left: 16.667%;
-}
-
-.push-1-7 {
-	margin-left: 14.28%;
-}
-
-.push-1-8 {
-	margin-left: 12.5%;
-}
-
-.push-1-9 {
-	margin-left: 11.1%;
-}
-
-.push-1-10 {
-	margin-left: 10%;
-}
-
-.push-1-11 {
-	margin-left: 9.09%;
-}
-
-.push-1-12 {
-	margin-left: 8.33%
-}
-
 @media handheld, only screen and (max-width: 767px) {
-	.grid {
-		width: 100%;
-		min-width: 0;
-		margin-left: 0;
-		margin-right: 0;
-		padding-left: 20px; /* grid-space to left */
-		padding-right: 10px; /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */
-	}
+    .grid {
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 20px;
+        /* grid-space to left */
+        padding-right: 10px;
+        /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */
+    }
+    [class*='col-'] {
+        width: auto;
+        float: none;
+        margin: 10px 0;
+        padding-left: 0;
+        padding-right: 10px;
+        /* column-space */
+    }
+    [class*='col-'] [class*='col-'] {
+        padding-right: 0;
+    }
+    /* Mobile Layout */
+    [class*='mobile-col-'] {
+        float: left;
+        margin: 0 0 10px;
+        padding-left: 0;
+        padding-right: 10px;
+        /* column-space */
+        padding-bottom: 0;
+    }
+    .login {
+        margin-left: 60%;
+        margin-right: 30%;
+    }
 
-	[class*='col-'] {
-		width: auto;
-		float: none;
-		margin: 10px 0;
-		padding-left: 0;
-		padding-right: 10px; /* column-space */
-	}
+    h3 {
+        color: #FCE69B;
+        font-family: "Shadows Into Light";
+        font-size: 25px;
+        margin-left: 65%;
+        margin-top: -60px;
 
-	[class*='col-'] [class*='col-'] {
-		padding-right: 0;
-	}
+    }
 
-	/* Mobile Layout */
+    .Section {
+        border-radius: 10px;
+        background-color: #D9E2C3;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
 
-	[class*='mobile-col-'] {
-		float: left;
-		margin: 0 0 10px;
-		padding-left: 0;
-		padding-right: 10px; /* column-space */
-		padding-bottom: 0;
-	}
+    .Section2 {
+        border-radius: 10px;
+        background-color: #D9E2C3;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        margin-left: -5px;
+    }
 
-	.mobile-col-1-1 {
-		width: 100%;
-	}
-	.mobile-col-2-3, .mobile-col-8-12 {
-		width: 66.66%;
-	}
+    .showBookmarks, .showRecs {
+      background-color: #D9E2C3;
+      font-size: 12px;
+      height: 40px;
+      border-radius: 5px;
+      width: 125px;
+    }
 
-	.mobile-col-1-2, .mobile-col-6-12 {
-		width: 50%;
-	}
-
-	.mobile-col-1-3, .mobile-col-4-12 {
-		width: 33.33%;
-	}
-
-	.mobile-col-1-4, .mobile-col-3-12 {
-		width: 25%;
-	}
-
-	.mobile-col-1-5 {
-		width: 20%;
-	}
-
-	.mobile-col-1-6, .mobile-col-2-12 {
-		width: 16.667%;
-	}
-
-	.mobile-col-1-7 {
-		width: 14.28%;
-	}
-
-	.mobile-col-1-8 {
-		width: 12.5%;
-	}
-
-	.mobile-col-1-9 {
-		width: 11.1%;
-	}
-
-	.mobile-col-1-10 {
-		width: 10%;
-	}
-
-	.mobile-col-1-11 {
-		width: 9.09%;
-	}
-
-	.mobile-col-1-12 {
-		width: 8.33%
-	}
-
-	/* Layout Columns */
-
-	.mobile-col-11-12 {
-		width: 91.66%
-	}
-
-	.mobile-col-10-12 {
-		width: 83.333%;
-	}
-
-	.mobile-col-9-12 {
-		width: 75%;
-	}
-
-	.mobile-col-5-12 {
-		width: 41.66%;
-	}
-
-	.mobile-col-7-12 {
-		width: 58.33%
-	}
-
-	.hide-on-mobile {
-		display: none !important;
-		width: 0;
-		height: 0;
-	}
-}
+    .description {
+        padding-bottom: 5px;
+        font-size: 24px;
+    }
+    .mobile-col-1-1 {
+        width: 100%;
+    }
