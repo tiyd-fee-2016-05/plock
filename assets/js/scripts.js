@@ -14,7 +14,7 @@ $( function () {
   $.ajax({
     method: 'GET',
 
-    url: 'https://dummyplock.herokuapp.com/my_bookmarks',
+    url: 'http://74be7da1.ngrok.io/my_bookmarks',
     data: { "username": plockUser, "password": plockPassword},
   })
     .success(function (data) {
@@ -37,10 +37,11 @@ $( function () {
     } // end for loop
  // end POST success
 
+
  $.ajax({
      method: 'GET',
-     url: 'https://dummyplock.herokuapp.com/recommendations',
-     data: { "username": plockUser, "password": plockPassword},
+     url: 'http://74be7da1.ngrok.io/recommendations',
+     data: { "username": "erikpetersen", "password": "password"},
    })
      .success(function (data) {
      console.log("success");
@@ -56,7 +57,7 @@ $( function () {
       // console.log( bookmarks[index]);
       // This is OK for now, but will need to switch to creating the <li> here in js if we want this dynamic
       // line 33 is throwing: scripts.js:33 Uncaught TypeError: Cannot set property 'innerHTML' of undefined
-      recName[index].innerHTML = ( Array.from(bookmarksRecommended)[index].bookmark_name );
+      recName[index].innerHTML = (bookmarksRecommended)[index].bookmark_name;
       recDescrip[index].innerHTML = ( Array.from(bookmarksRecommended)[index].bookmark_description );
       recURL[index].innerHTML = ( Array.from(bookmarksRecommended)[index].bookmark_url );
      } // end for loop
@@ -75,7 +76,7 @@ $( function () {
 
       $.ajax({
         method: "POST",
-        url: "https://dummyplock.herokuapp.com/my_bookmarks",
+        url: "http://74be7da1.ngrok.io/my_bookmarks",
 
         data: { "username": plockUser, "password":plockPassword, "bookmark_name": $('input[name="saveaBookmark"]').val(), "bookmark_description": $('input[name="saveaDescrip"]').val(),
                 "bookmark_url": $('input[name="saveaURL"]').val()
@@ -112,9 +113,9 @@ $( function () {
 
         $.ajax({
           method: "POST",
-          url: "https://dummyplock.herokuapp.com/recommendations",
+          url: "http://74be7da1.ngrok.io/recommendations",
           data: { "username":plockUser, "password":plockPassword, "bookmark_id": Array.from(bookmarksReceived)[index].id,
-                  "recipient": receiver
+                  "recipient": "receiver"
                 }
           }) // end ajax POST
         .success(function() {

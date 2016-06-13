@@ -121,6 +121,21 @@ margin-left: 75%
     padding: 10px;
 
 }
+
+.bookmarkDetails .recItem {
+    color: white;
+    font-size: 20px;
+}
+.bookmarkDetails .recDescrip {
+    color: #FBE58F;
+    font-size: 15px;
+}
+.bookmarkDetails .recURL {
+    color: #85CBCD;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
 #NewBookMarkName, #NewBookMarkURL, #NewBookMarkDescription {
   height: 20px;
   width: 200px;
