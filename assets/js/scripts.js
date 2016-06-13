@@ -1,3 +1,5 @@
+// I know this code doesn't work completely, but I've tried to at least comment it out in such a way that I can explain to myself what the code is saying/doing.  I tried to pull Sinovia's branch down so that I could look at how she got her "recommend a bookmark" button to work.  I botched the pull horribly.  I was very careful to delete the lines between <<<<HEAD and  =====.  I was using the command lines step-by-step from the GH website for pulling when there are merge conflicts.  I thought everything was going smoothly, but I didn't realize that I had been switched to Sinovia's branch when I committed.  Thank goodness she still had her local file versions!!  I could try to pull her files again and having a functional version on my branch, but it's getting late and I don't want to risk the trauma again.  It's been a rough day for me, success-wise.
+
 $( function () {
   "use strict";
 
@@ -11,10 +13,10 @@ $( function () {
     console.log(plockUser);
     console.log(plockPassword);
 
-  // GET sends username & password.
+  // GET sends (?) username & password.
   $.ajax({
     method: 'GET',
-    url: 'https://dummyplock.herokuapp.com/my_bookmarks',
+    url: 'http://74be7da1.ngrok.io/my_bookmarks',
     data: { "username": plockUser, "password": plockPassword},
   })
   // .success returns the data from the url above, console.log proves that it made a successful connection
@@ -33,17 +35,17 @@ $( function () {
     for( var index = 0; index < data.length; index++ ) {
     //  console.log(index);
      // console.log( bookmarks[index]);
-     // Erik's comment - This is OK for now, but will need to switch to creating the <li> here in js if we want this dynamic
 
-// ....at the location of bookmark_name, add to my html code as follows: (make an array
+
+// This "says" at the location (index) of bookmark_name, add to my html code as follows: (make an array
  // from the data returned from the API) add bookmark_name to my html so it's value can be visible (in a moment)
  // (same process for bookmark_description and bookmark_url) ........
      bookmarkName[index].innerHTML = ( Array.from(data)[index].bookmark_name );
      bookmarkDescrip[index].innerHTML = ( Array.from(data)[index].bookmark_description );
      bookmarkURL[index].innerHTML = ( Array.from(data)[index].bookmark_url );
-    } // end for loop
-   }); // end GET success
-  }); // end POST success
+   } // end of the for loop
+ }); // end  of GET success line 21
+  }); // end line 6
 
   // .......SAVE A BOOKMARK: When the element with id NewBookMarkDescription is clicked,
   // send to the backend all of the data listed.
@@ -53,7 +55,7 @@ $( function () {
 
       $.ajax({
         method: "POST",
-        url: "https://dummyplock.herokuapp.com/my_bookmarks",
+        url: "http://74be7da1.ngrok.io/my_bookmarkss",
         data: { "username":"fake", "password":"password", "bookmark_name": $('input[name="saveaBookmark"]').val(), "bookmark_description": $('input[name="saveaDescrip"]').val(),
                 "bookmark_url": $('input[name="saveaURL"]').val()
               }
@@ -74,7 +76,7 @@ $( function () {
       console.log( Array.from(bookmarksReceived)[0].id );
       $.ajax({
         method: "POST",
-        url: "https://dummyplock.herokuapp.com",
+        url: "http://74be7da1.ngrok.io/recommendations",
         data: { "username":"fake", "password":"password", "bookmark_id": Array.from(bookmarksReceived)[0].id,
                 "recipient":"recipient"
               }
@@ -91,7 +93,7 @@ $( function () {
 
 }); // end outer function
 
-// ......code that makes the "Show Recs!" tab be active ......
+// ..Sinovia's comment....code that makes the "Show Recs!" tab be active ......
 $('.showRecs').on('click', function() {
      $('.recTab').css('display', 'block');
      $('.bookmarkTab').css('display', 'none');
@@ -106,10 +108,11 @@ $('.showRecs').on('click', function() {
      $('.startingTab').css('display', 'none');
      console.log("Second Click works");
  });
-// .......my efforts at "recommend a bookmark" code
+// .......my fragmented efforts at "recommend a bookmark" code
  // $('.recommendABookmark').on('submit', function (e) {
  //   e.preventDefault();
  //
  //   var plockUser = $('.userInfo[name="user"]').val();
  //   var plockPassword = $('.passwordInfo[name="password"]').val();
  //   var bookmarkId = $('.BOOKMARKID=[i]').val();
+ // .BOOKMARKID is just a placeholder until I know the actual id
