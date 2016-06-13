@@ -134,11 +134,11 @@ margin-left: 75%
 }
 .bookmarkDetails .savedBookmarkItem {
     color: white;
-    font-size: 30px;
+    font-size: 20px;
 }
 .bookmarkDetails .savedMarkDescrip {
     color: #FBE58F;
-    font-size: 20px;
+    font-size: 15px;
 }
 .bookmarkDetails .savedMarkURL {
     color: #85CBCD;
@@ -223,6 +223,10 @@ input {
 
 .SeeMore {
     display: none;
+  }
+
+.SeeMore2 {
+        display: none;
 
 }
 .Next6 {
@@ -237,6 +241,29 @@ input {
 
 }
 .Hide6 {
+  display: none;
+  background-color: #B378D3;
+  font-size: 12px;
+  margin-left: 35%;
+  margin-right: 40%;
+  height: 40px;
+  border-radius: 5px;
+  width: 150px;
+
+}
+
+.Next12 {
+    display: none;
+    background-color: #B378D3;
+    font-size: 12px;
+    margin-left: 35%;
+    margin-right: 40%;
+    height: 40px;
+    border-radius: 5px;
+    width: 150px;
+
+}
+.Hide12 {
   display: none;
   background-color: #B378D3;
   font-size: 12px;

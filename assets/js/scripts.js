@@ -184,7 +184,10 @@ $( function () {
 $('.Next6').on('click', function() {
     $(".Next6").css('display', 'none')
     $('.Hide6').css('display', 'block');
-    $(".SeeMore").css("display", "block")
+    $(".SeeMore").css("display", "block");
+    $(".Next12").css("display", "block")
+
+
 
 });
 
@@ -194,5 +197,21 @@ $('.Hide6').on('click', function() {
     $(".SeeMore").css("display", "none")
 
 });
+
+$('.Next12').on('click', function() {
+    $(".Next12").css('display', 'none')
+    $('.Hide12').css('display', 'block');
+    $(".SeeMore2").css("display", "block")
+
+});
+
+$('.Hide12').on('click', function() {
+    $(".Next12").css('display', 'block')
+    $('.Hide12').css('display', 'none');
+    $(".SeeMore2").css("display", "none")
+
+});
+
+
 });
 });
