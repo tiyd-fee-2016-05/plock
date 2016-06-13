@@ -30,6 +30,14 @@ h3 {
     margin-top: -60px;
 
 }
+
+.saveBtn {
+  background-color: #B378D3;
+  font-size: 12px;
+  height: 20px;
+  border-radius: 5px;
+  width: 125px;
+}
 .plockDescription {
     font-size: 20px;
     margin-left: 10%;
@@ -37,6 +45,7 @@ h3 {
     padding-top: 10px;
     color:white;
 }
+
 
 .Section2 {
   margin-left: 10%;
@@ -95,11 +104,12 @@ margin-left: 75%
     width: 350px;
 }
 .showBookmarks, .showRecs {
-  background-color: #B378D3;
+  background-color: #43A8BA;
   font-size: 12px;
   height: 40px;
   border-radius: 5px;
   width: 125px;
+  border none;
 }
 
 .Section {
@@ -121,7 +131,6 @@ margin-left: 75%
 .details {
   color:#FBE58F;
   display: inline-block;;
-  border: 1px solid lime;
 }
 .bookmarkDetails .savedBookmarkItem {
     color: white;
@@ -193,10 +202,17 @@ input {
 .bookmarkPhoto {
     height: 100px;
     width: 100px;
+    border: 1px solid green;
     border-radius: 10px;
     margin-top: 10px;
     margin-right: 5px;
     float: left;
+    font-size: 75px;
+    color: white;
+    text-align: center;
+    font-family: "Shadows Into Light";
+    vertical-align: middle;
+    background-color: #9AD0CA;
 }
 .bookmarkDetails .nameofBookmark {
     display: inline-block;
@@ -212,7 +228,7 @@ input {
 .Next6 {
     display: block;
     background-color: #B378D3;
-    font-size: 20px;
+    font-size: 12px;
     margin-left: 35%;
     margin-right: 40%;
     height: 40px;
@@ -223,7 +239,7 @@ input {
 .Hide6 {
   display: none;
   background-color: #B378D3;
-  font-size: 20px;
+  font-size: 12px;
   margin-left: 35%;
   margin-right: 40%;
   height: 40px;
@@ -314,11 +330,42 @@ input {
         padding-bottom: 0;
     }
     .login {
-        border: 3px solid red;
-        margin-left: 30%;
+        margin-left: 60%;
         margin-right: 30%;
-        margin-top: 65px;
     }
+
+    h3 {
+        color: #FCE69B;
+        font-family: "Shadows Into Light";
+        font-size: 25px;
+        margin-left: 65%;
+        margin-top: -60px;
+
+    }
+
+    .Section {
+        border-radius: 10px;
+        background-color: #D9E2C3;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .Section2 {
+        border-radius: 10px;
+        background-color: #D9E2C3;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        margin-left: -5px;
+    }
+
+    .showBookmarks, .showRecs {
+      background-color: #D9E2C3;
+      font-size: 12px;
+      height: 40px;
+      border-radius: 5px;
+      width: 125px;
+    }
+
     .description {
         padding-bottom: 5px;
         font-size: 24px;
